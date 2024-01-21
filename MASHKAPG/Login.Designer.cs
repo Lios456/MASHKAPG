@@ -101,9 +101,12 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.Size = new Size(794, 28);
             tableLayoutPanel2.TabIndex = 0;
+            tableLayoutPanel2.MouseDown += tableLayoutPanel2_MouseDown;
             // 
             // button1
             // 
+            button1.BackgroundImage = Properties.Resources.menos;
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.Dock = DockStyle.Fill;
             button1.FlatAppearance.BorderColor = Color.White;
             button1.FlatAppearance.BorderSize = 0;
@@ -112,11 +115,13 @@
             button1.Name = "button1";
             button1.Size = new Size(44, 22);
             button1.TabIndex = 0;
-            button1.Text = "X";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackgroundImage = Properties.Resources.maximizar;
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.Dock = DockStyle.Fill;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
@@ -124,11 +129,13 @@
             button2.Name = "button2";
             button2.Size = new Size(45, 22);
             button2.TabIndex = 1;
-            button2.Text = "X";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
+            button3.BackgroundImage = Properties.Resources.cerrar_sesion;
+            button3.BackgroundImageLayout = ImageLayout.Zoom;
             button3.Dock = DockStyle.Fill;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
@@ -136,7 +143,6 @@
             button3.Name = "button3";
             button3.Size = new Size(52, 22);
             button3.TabIndex = 2;
-            button3.Text = "X";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -377,6 +383,7 @@
             bt_login.TabIndex = 2;
             bt_login.Text = "Log In";
             bt_login.UseVisualStyleBackColor = false;
+            bt_login.Click += bt_login_Click;
             // 
             // Login
             // 
@@ -386,7 +393,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(tableLayoutPanel1);
             ForeColor = SystemColors.ControlLight;
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Login";
             Text = "Login";
             tableLayoutPanel1.ResumeLayout(false);
