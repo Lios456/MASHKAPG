@@ -270,6 +270,7 @@
             // password
             // 
             password.Anchor = AnchorStyles.Left;
+            password.BackColor = Color.White;
             password.BorderStyle = BorderStyle.FixedSingle;
             password.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             password.Location = new Point(211, 35);
@@ -323,6 +324,7 @@
             // usuario
             // 
             usuario.Anchor = AnchorStyles.Left;
+            usuario.BackColor = Color.White;
             usuario.BorderStyle = BorderStyle.FixedSingle;
             usuario.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             usuario.Location = new Point(209, 35);

@@ -35,33 +35,33 @@
             button3 = new Button();
             label1 = new Label();
             panel1 = new Panel();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            pictureBox4 = new PictureBox();
-            label2 = new Label();
-            pictureBox1 = new PictureBox();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            label3 = new Label();
+            textBox2 = new TextBox();
+            pictureBox3 = new PictureBox();
+            textBox3 = new TextBox();
             pictureBox2 = new PictureBox();
             bt_registrar = new Button();
             bt_limpiar = new Button();
             button5 = new Button();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            pictureBox4 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            label2 = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -174,138 +174,6 @@
             panel1.Size = new Size(908, 519);
             panel1.TabIndex = 1;
             // 
-            // tableLayoutPanel3
-            // 
-            tableLayoutPanel3.BackColor = Color.FromArgb(255, 255, 128);
-            tableLayoutPanel3.ColumnCount = 3;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel3.Controls.Add(pictureBox4, 0, 0);
-            tableLayoutPanel3.Controls.Add(pictureBox1, 2, 0);
-            tableLayoutPanel3.Controls.Add(label2, 1, 0);
-            tableLayoutPanel3.Location = new Point(3, 3);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(905, 70);
-            tableLayoutPanel3.TabIndex = 2;
-            tableLayoutPanel3.Paint += tableLayoutPanel3_Paint;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.BackgroundImage = Properties.Resources.pesas;
-            pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox4.Dock = DockStyle.Fill;
-            pictureBox4.Location = new Point(3, 3);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(258, 64);
-            pictureBox4.TabIndex = 2;
-            pictureBox4.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Font = new Font("Comic Sans MS", 17.8348637F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(267, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(380, 70);
-            label2.TabIndex = 3;
-            label2.Text = "REGISTRO DE USUARIOS";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.pesas;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(653, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(258, 64);
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Right;
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(309, 159);
-            label4.Name = "label4";
-            label4.Size = new Size(105, 24);
-            label4.TabIndex = 4;
-            label4.Text = "Contraseña:";
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(225, 234);
-            label5.Name = "label5";
-            label5.Size = new Size(189, 24);
-            label5.TabIndex = 5;
-            label5.Text = "Confirmar contraseña:";
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Left;
-            textBox1.BackColor = Color.FromArgb(255, 255, 128);
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(420, 108);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(114, 26);
-            textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            textBox2.Anchor = AnchorStyles.Left;
-            textBox2.BackColor = Color.FromArgb(255, 255, 128);
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(420, 158);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(114, 26);
-            textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            textBox3.Anchor = AnchorStyles.Left;
-            textBox3.BackColor = Color.FromArgb(255, 255, 128);
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(420, 233);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(114, 26);
-            textBox3.TabIndex = 8;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Anchor = AnchorStyles.Left;
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Cursor = Cursors.Hand;
-            pictureBox3.Image = Properties.Resources.ojo;
-            pictureBox3.Location = new Point(540, 160);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(38, 22);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 9;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Anchor = AnchorStyles.Left;
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Cursor = Cursors.Hand;
-            pictureBox5.Image = Properties.Resources.ojo;
-            pictureBox5.Location = new Point(540, 235);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(38, 22);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 10;
-            pictureBox5.TabStop = false;
-            // 
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.BackColor = Color.Transparent;
@@ -336,8 +204,8 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 64.62585F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 35.37415F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 49F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 100F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 38F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 62F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 76F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
             tableLayoutPanel4.Size = new Size(905, 405);
             tableLayoutPanel4.TabIndex = 14;
@@ -355,6 +223,86 @@
             label3.Size = new Size(76, 24);
             label3.TabIndex = 4;
             label3.Text = "Usuario:";
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(309, 159);
+            label4.Name = "label4";
+            label4.Size = new Size(105, 24);
+            label4.TabIndex = 4;
+            label4.Text = "Contraseña:";
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(225, 215);
+            label5.Name = "label5";
+            label5.Size = new Size(189, 24);
+            label5.TabIndex = 5;
+            label5.Text = "Confirmar contraseña:";
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Left;
+            textBox1.BackColor = Color.FromArgb(255, 255, 128);
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Location = new Point(420, 108);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(114, 26);
+            textBox1.TabIndex = 6;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Anchor = AnchorStyles.Left;
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox5.Cursor = Cursors.Hand;
+            pictureBox5.Image = Properties.Resources.ojo;
+            pictureBox5.Location = new Point(540, 216);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(38, 22);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 10;
+            pictureBox5.TabStop = false;
+            // 
+            // textBox2
+            // 
+            textBox2.Anchor = AnchorStyles.Left;
+            textBox2.BackColor = Color.FromArgb(255, 255, 128);
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Location = new Point(420, 158);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(114, 26);
+            textBox2.TabIndex = 7;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Anchor = AnchorStyles.Left;
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Cursor = Cursors.Hand;
+            pictureBox3.Image = Properties.Resources.ojo;
+            pictureBox3.Location = new Point(540, 160);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(38, 22);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
+            // 
+            // textBox3
+            // 
+            textBox3.Anchor = AnchorStyles.Left;
+            textBox3.BackColor = Color.FromArgb(255, 255, 128);
+            textBox3.BorderStyle = BorderStyle.FixedSingle;
+            textBox3.Location = new Point(420, 214);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(114, 26);
+            textBox3.TabIndex = 8;
             // 
             // pictureBox2
             // 
@@ -412,6 +360,58 @@
             button5.Text = "REGRESAR";
             button5.UseVisualStyleBackColor = false;
             // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.BackColor = Color.FromArgb(255, 255, 128);
+            tableLayoutPanel3.ColumnCount = 3;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel3.Controls.Add(pictureBox4, 0, 0);
+            tableLayoutPanel3.Controls.Add(pictureBox1, 2, 0);
+            tableLayoutPanel3.Controls.Add(label2, 1, 0);
+            tableLayoutPanel3.Location = new Point(3, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.Size = new Size(905, 70);
+            tableLayoutPanel3.TabIndex = 2;
+            tableLayoutPanel3.Paint += tableLayoutPanel3_Paint;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackgroundImage = Properties.Resources.pesas;
+            pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox4.Dock = DockStyle.Fill;
+            pictureBox4.Location = new Point(3, 3);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(258, 64);
+            pictureBox4.TabIndex = 2;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.pesas;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Location = new Point(653, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(258, 64);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Font = new Font("Comic Sans MS", 17.8348637F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(267, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(380, 70);
+            label2.TabIndex = 3;
+            label2.Text = "REGISTRO DE USUARIOS";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // RegistrarUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
@@ -427,15 +427,15 @@
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             panel1.ResumeLayout(false);
+            tableLayoutPanel4.ResumeLayout(false);
+            tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            tableLayoutPanel4.ResumeLayout(false);
-            tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
