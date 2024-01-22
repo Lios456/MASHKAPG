@@ -1,0 +1,1 @@
+Database = "mashkapg"; User = "root"; Password = "root"; Server = "localhost"; 

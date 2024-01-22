@@ -15,7 +15,6 @@ C:\Users\Ferlu\source\repos\MASHKAPG\MASHKAPG\obj\Debug\net6.0-windows\MASHKAPG.
 C:\Users\Ferlu\source\repos\MASHKAPG\MASHKAPG\obj\Debug\net6.0-windows\MASHKAPG.AssemblyInfoInputs.cache
 C:\Users\Ferlu\source\repos\MASHKAPG\MASHKAPG\obj\Debug\net6.0-windows\MASHKAPG.AssemblyInfo.cs
 C:\Users\Ferlu\source\repos\MASHKAPG\MASHKAPG\obj\Debug\net6.0-windows\MASHKAPG.csproj.CoreCompileInputs.cache
-C:\Users\Ferlu\source\repos\MASHKAPG\MASHKAPG\obj\Debug\net6.0-windows\MASHKAPG.sourcelink.json
 C:\Users\Ferlu\source\repos\MASHKAPG\MASHKAPG\obj\Debug\net6.0-windows\MASHKAPG.dll
 C:\Users\Ferlu\source\repos\MASHKAPG\MASHKAPG\obj\Debug\net6.0-windows\refint\MASHKAPG.dll
 C:\Users\Ferlu\source\repos\MASHKAPG\MASHKAPG\obj\Debug\net6.0-windows\MASHKAPG.pdb

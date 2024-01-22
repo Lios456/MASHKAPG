@@ -14,12 +14,12 @@ namespace MASHKAPG.clases
 {
     internal class ConexionMysql
     {
-
         private MySqlConnection connection = new MySqlConnection(File.ReadAllText("cadena.txt"));
-
+        
         // ---------------------------------------------------------------------------------------------------------------
         public void CrearConexion()
         {
+            MessageBox.Show(File.ReadAllText("cadena.txt"));
             connection.Open();
 
             //connection.Close();
