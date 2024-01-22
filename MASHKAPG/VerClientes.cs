@@ -16,6 +16,7 @@ namespace MASHKAPG
         public VerClientes()
         {
             InitializeComponent();
+            filtro.SelectedIndex = 0;
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -49,6 +50,39 @@ namespace MASHKAPG
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void bt_regresar_Click(object sender, EventArgs e)
+        {
+            new VistaAdmin().Show();
+            this.Close();
+        }
+
+        private void filtro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextBox texto = new TextBox();
+            if (filtro.SelectedItem.ToString() == "Nombre" || filtro.SelectedItem.ToString() == "Apellido")
+            {
+                tableLayoutPanel9.Controls.Remove(tableLayoutPanel9.GetControlFromPosition(0, 0));
+                tableLayoutPanel9.Controls.Add(texto, 0, 0);
+                texto.Size = new Size(100, 10);
+                texto.Dock = DockStyle.Fill;
+                texto.Name = "texto";
+                texto.BorderStyle = BorderStyle.FixedSingle;
+                texto.BackColor = Color.White;
+                if(filtro.SelectedItem.ToString() == "Nombre")
+                {
+                    texto.Text = "Nombre";
+                }
+                else
+                {
+                    texto.Text = "Apellido";
+                }
+            }
+            else
+            {
+                tableLayoutPanel9.Controls.Remove(tableLayoutPanel9.GetControlFromPosition(0,0));
+            }
         }
     }
 }

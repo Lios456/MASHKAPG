@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MASHKAPG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39c4823a51dfca3e8d6926a56a247c4287a54457")]
 [assembly: System.Reflection.AssemblyProductAttribute("MASHKAPG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MASHKAPG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
