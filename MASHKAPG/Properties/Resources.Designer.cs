@@ -83,6 +83,16 @@ namespace MASHKAPG.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_MASHKAPG_opaco {
+            get {
+                object obj = ResourceManager.GetObject("logo_MASHKAPG_opaco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_MASHKAPG_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("logo_MASHKAPG-removebg-preview", resourceCulture);
@@ -126,6 +136,37 @@ namespace MASHKAPG.Properties {
         internal static System.Drawing.Bitmap pesas {
             get {
                 object obj = ResourceManager.GetObject("pesas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Picsart_24_01_21_20_10_31_697 {
+            get {
+                object obj = ResourceManager.GetObject("Picsart_24_01_21_20_10_31_697", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_silhouettes_of_bodybuilder_and_fat_man_pursy_dense_obese_vector_png_image_5922886 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree_silhouettes_of_bodybuilder_and_fat_man_pursy_dense_obese_vector_png_image" +
+                        "_5922886", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silueta_1 {
+            get {
+                object obj = ResourceManager.GetObject("silueta_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
