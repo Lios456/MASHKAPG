@@ -16,7 +16,7 @@ namespace MASHKAPG
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        
+
 
         private void ver_con_Click(object sender, EventArgs e)
         {

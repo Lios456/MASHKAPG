@@ -151,7 +151,7 @@
             label1.AutoSize = true;
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Comic Sans MS", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Yellow;
+            label1.ForeColor = Color.FromArgb(0, 0, 0, 0);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
             label1.Size = new Size(292, 32);
@@ -391,7 +391,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
+            BackColor = Color.White;
             ClientSize = new Size(800, 510);
             Controls.Add(tableLayoutPanel1);
             Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
