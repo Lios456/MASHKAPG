@@ -1793,19 +1793,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ferlu\\.nuget\\packages\\": {}
+    "C:\\Users\\Richard\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ferlu\\source\\repos\\MASHKAPG\\MASHKAPG\\MASHKAPG.csproj",
+      "projectUniqueName": "C:\\Users\\Richard\\Documents\\Universidad Proyectos\\C# INTERFAZ\\MASHKAPG\\MASHKAPG\\MASHKAPG.csproj",
       "projectName": "MASHKAPG",
-      "projectPath": "C:\\Users\\Ferlu\\source\\repos\\MASHKAPG\\MASHKAPG\\MASHKAPG.csproj",
-      "packagesPath": "C:\\Users\\Ferlu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ferlu\\source\\repos\\MASHKAPG\\MASHKAPG\\obj\\",
+      "projectPath": "C:\\Users\\Richard\\Documents\\Universidad Proyectos\\C# INTERFAZ\\MASHKAPG\\MASHKAPG\\MASHKAPG.csproj",
+      "packagesPath": "C:\\Users\\Richard\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Richard\\Documents\\Universidad Proyectos\\C# INTERFAZ\\MASHKAPG\\MASHKAPG\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ferlu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Richard\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1855,7 +1855,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
