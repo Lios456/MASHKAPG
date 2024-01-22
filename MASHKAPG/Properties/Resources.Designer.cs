@@ -63,9 +63,9 @@ namespace MASHKAPG.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cerrar_sesion {
+        internal static System.Drawing.Bitmap boton_salir_a_la_aplicacion {
             get {
-                object obj = ResourceManager.GetObject("cerrar-sesion", resourceCulture);
+                object obj = ResourceManager.GetObject("boton-salir-a-la-aplicacion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,19 +103,9 @@ namespace MASHKAPG.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap maximizar {
+        internal static System.Drawing.Bitmap minimizar {
             get {
-                object obj = ResourceManager.GetObject("maximizar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap menos {
-            get {
-                object obj = ResourceManager.GetObject("menos", resourceCulture);
+                object obj = ResourceManager.GetObject("minimizar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +116,16 @@ namespace MASHKAPG.Properties {
         internal static System.Drawing.Bitmap ojo {
             get {
                 object obj = ResourceManager.GetObject("ojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opcion_de_maximizar_tamano {
+            get {
+                object obj = ResourceManager.GetObject("opcion-de-maximizar-tamano", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

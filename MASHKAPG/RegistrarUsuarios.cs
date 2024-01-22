@@ -60,5 +60,42 @@ namespace MASHKAPG
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new VistaAdmin().Show();
+        }
+
+        private void bt_limpiar_Click(object sender, EventArgs e)
+        {
+            this.usuario.Text = "";
+            this.password1.Text = "";
+            this.password2.Text = "";
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (this.password1.PasswordChar == '\0')
+            {
+                this.password1.PasswordChar = '*';
+            }
+            else
+            {
+                this.password1.PasswordChar = '\0';
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (this.password2.PasswordChar == '\0')
+            {
+                this.password2.PasswordChar = '*';
+            }
+            else
+            {
+                this.password2.PasswordChar = '\0';
+            }
+        }
     }
 }

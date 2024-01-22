@@ -37,11 +37,11 @@
             panel1 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
-            bt_regresar = new Button();
             pictureBox3 = new PictureBox();
+            bt_regresar = new Button();
             tableLayoutPanel5 = new TableLayoutPanel();
-            pictureBox1 = new PictureBox();
             bt_nuevocliente = new Button();
+            pictureBox1 = new PictureBox();
             bt_administrarclientes = new Button();
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -97,7 +97,7 @@
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.menos;
+            button1.BackgroundImage = Properties.Resources.minimizar;
             button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.Dock = DockStyle.Fill;
             button1.FlatAppearance.BorderColor = Color.White;
@@ -112,7 +112,7 @@
             // 
             // button2
             // 
-            button2.BackgroundImage = Properties.Resources.maximizar;
+            button2.BackgroundImage = Properties.Resources.opcion_de_maximizar_tamano;
             button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.Dock = DockStyle.Fill;
             button2.FlatAppearance.BorderSize = 0;
@@ -126,7 +126,7 @@
             // 
             // button3
             // 
-            button3.BackgroundImage = Properties.Resources.cerrar_sesion;
+            button3.BackgroundImage = Properties.Resources.boton_salir_a_la_aplicacion;
             button3.BackgroundImageLayout = ImageLayout.Zoom;
             button3.Dock = DockStyle.Fill;
             button3.FlatAppearance.BorderSize = 0;
@@ -194,6 +194,17 @@
             tableLayoutPanel4.Size = new Size(254, 66);
             tableLayoutPanel4.TabIndex = 0;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Anchor = AnchorStyles.Left;
+            pictureBox3.BackgroundImage = Properties.Resources.pesas;
+            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox3.Location = new Point(130, 8);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(100, 50);
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            // 
             // bt_regresar
             // 
             bt_regresar.Anchor = AnchorStyles.Right;
@@ -207,17 +218,6 @@
             bt_regresar.TabIndex = 1;
             bt_regresar.Text = "REGRESAR";
             bt_regresar.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Anchor = AnchorStyles.Left;
-            pictureBox3.BackgroundImage = Properties.Resources.pesas;
-            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox3.Location = new Point(130, 8);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(100, 50);
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -241,17 +241,6 @@
             tableLayoutPanel5.TabIndex = 1;
             tableLayoutPanel5.Paint += tableLayoutPanel5_Paint;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.silueta_1;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(256, 243);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
             // bt_nuevocliente
             // 
             bt_nuevocliente.Anchor = AnchorStyles.None;
@@ -265,6 +254,17 @@
             bt_nuevocliente.TabIndex = 2;
             bt_nuevocliente.Text = "NUEVO CLIENTE";
             bt_nuevocliente.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.silueta_1;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(256, 243);
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // bt_administrarclientes
             // 

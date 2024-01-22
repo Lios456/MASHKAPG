@@ -70,7 +70,7 @@ namespace MASHKAPG
                 texto.Name = "texto";
                 texto.BorderStyle = BorderStyle.FixedSingle;
                 texto.BackColor = Color.White;
-                if(filtro.SelectedItem.ToString() == "Nombre")
+                if (filtro.SelectedItem.ToString() == "Nombre")
                 {
                     texto.Text = "Nombre";
                 }
@@ -81,7 +81,7 @@ namespace MASHKAPG
             }
             else
             {
-                tableLayoutPanel9.Controls.Remove(tableLayoutPanel9.GetControlFromPosition(0,0));
+                tableLayoutPanel9.Controls.Remove(tableLayoutPanel9.GetControlFromPosition(0, 0));
             }
         }
     }

@@ -39,11 +39,11 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
+            usuario = new TextBox();
             pictureBox5 = new PictureBox();
-            textBox2 = new TextBox();
+            password1 = new TextBox();
             pictureBox3 = new PictureBox();
-            textBox3 = new TextBox();
+            password2 = new TextBox();
             pictureBox2 = new PictureBox();
             bt_registrar = new Button();
             bt_limpiar = new Button();
@@ -103,7 +103,7 @@
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.menos;
+            button1.BackgroundImage = Properties.Resources.minimizar;
             button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.Dock = DockStyle.Fill;
             button1.FlatAppearance.BorderColor = Color.White;
@@ -118,7 +118,7 @@
             // 
             // button2
             // 
-            button2.BackgroundImage = Properties.Resources.maximizar;
+            button2.BackgroundImage = Properties.Resources.opcion_de_maximizar_tamano;
             button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.Dock = DockStyle.Fill;
             button2.FlatAppearance.BorderSize = 0;
@@ -132,7 +132,7 @@
             // 
             // button3
             // 
-            button3.BackgroundImage = Properties.Resources.cerrar_sesion;
+            button3.BackgroundImage = Properties.Resources.boton_salir_a_la_aplicacion;
             button3.BackgroundImageLayout = ImageLayout.Zoom;
             button3.Dock = DockStyle.Fill;
             button3.FlatAppearance.BorderSize = 0;
@@ -159,7 +159,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
+            panel1.BackColor = Color.LightGray;
             panel1.Controls.Add(tableLayoutPanel4);
             panel1.Controls.Add(tableLayoutPanel3);
             panel1.Dock = DockStyle.Fill;
@@ -174,35 +174,36 @@
             tableLayoutPanel4.BackgroundImage = Properties.Resources.logo_MASHKAPG_opaco;
             tableLayoutPanel4.BackgroundImageLayout = ImageLayout.Zoom;
             tableLayoutPanel4.ColumnCount = 6;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 186F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 98F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             tableLayoutPanel4.Controls.Add(label3, 1, 1);
             tableLayoutPanel4.Controls.Add(label4, 1, 2);
             tableLayoutPanel4.Controls.Add(label5, 1, 3);
-            tableLayoutPanel4.Controls.Add(textBox1, 2, 1);
+            tableLayoutPanel4.Controls.Add(usuario, 2, 1);
             tableLayoutPanel4.Controls.Add(pictureBox5, 3, 3);
-            tableLayoutPanel4.Controls.Add(textBox2, 2, 2);
+            tableLayoutPanel4.Controls.Add(password1, 2, 2);
             tableLayoutPanel4.Controls.Add(pictureBox3, 3, 2);
-            tableLayoutPanel4.Controls.Add(textBox3, 2, 3);
+            tableLayoutPanel4.Controls.Add(password2, 2, 3);
             tableLayoutPanel4.Controls.Add(pictureBox2, 5, 5);
             tableLayoutPanel4.Controls.Add(bt_registrar, 0, 5);
             tableLayoutPanel4.Controls.Add(bt_limpiar, 1, 5);
             tableLayoutPanel4.Controls.Add(button5, 4, 5);
-            tableLayoutPanel4.Location = new Point(3, 62);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(0, 55);
             tableLayoutPanel4.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 6;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 64.62585F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 35.37415F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 39F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 49F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 55F));
-            tableLayoutPanel4.Size = new Size(792, 320);
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel4.Size = new Size(794, 355);
             tableLayoutPanel4.TabIndex = 14;
             // 
             // label3
@@ -210,12 +211,12 @@
             label3.Anchor = AnchorStyles.Right;
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
             label3.ImageAlign = ContentAlignment.TopCenter;
-            label3.Location = new Point(294, 85);
+            label3.Location = new Point(282, 103);
             label3.Name = "label3";
-            label3.Size = new Size(66, 20);
+            label3.Size = new Size(71, 23);
             label3.TabIndex = 4;
             label3.Text = "Usuario:";
             // 
@@ -224,10 +225,10 @@
             label4.Anchor = AnchorStyles.Right;
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(269, 125);
+            label4.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(258, 156);
             label4.Name = "label4";
-            label4.Size = new Size(91, 20);
+            label4.Size = new Size(95, 23);
             label4.TabIndex = 4;
             label4.Text = "Contraseña:";
             // 
@@ -236,82 +237,89 @@
             label5.Anchor = AnchorStyles.Right;
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(196, 169);
+            label5.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(260, 197);
             label5.Name = "label5";
-            label5.Size = new Size(164, 20);
+            label5.Size = new Size(93, 46);
             label5.TabIndex = 5;
             label5.Text = "Confirmar contraseña:";
             // 
-            // textBox1
+            // usuario
             // 
-            textBox1.Anchor = AnchorStyles.Left;
-            textBox1.BackColor = Color.FromArgb(255, 255, 128);
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(366, 84);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 6;
+            usuario.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            usuario.BackColor = Color.FromArgb(237, 232, 214);
+            usuario.BorderStyle = BorderStyle.FixedSingle;
+            usuario.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            usuario.Location = new Point(359, 99);
+            usuario.Margin = new Padding(3, 2, 3, 2);
+            usuario.Name = "usuario";
+            usuario.Size = new Size(152, 30);
+            usuario.TabIndex = 6;
             // 
             // pictureBox5
             // 
-            pictureBox5.Anchor = AnchorStyles.Left;
+            pictureBox5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.Cursor = Cursors.Hand;
             pictureBox5.Image = Properties.Resources.ojo;
-            pictureBox5.Location = new Point(472, 171);
+            pictureBox5.Location = new Point(517, 212);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(33, 17);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 10;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
-            // textBox2
+            // password1
             // 
-            textBox2.Anchor = AnchorStyles.Left;
-            textBox2.BackColor = Color.FromArgb(255, 255, 128);
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(366, 124);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 7;
+            password1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            password1.BackColor = Color.FromArgb(237, 232, 214);
+            password1.BorderStyle = BorderStyle.FixedSingle;
+            password1.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            password1.Location = new Point(359, 152);
+            password1.Margin = new Padding(3, 2, 3, 2);
+            password1.Name = "password1";
+            password1.PasswordChar = '*';
+            password1.Size = new Size(152, 30);
+            password1.TabIndex = 7;
             // 
             // pictureBox3
             // 
-            pictureBox3.Anchor = AnchorStyles.Left;
+            pictureBox3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Cursor = Cursors.Hand;
             pictureBox3.Image = Properties.Resources.ojo;
-            pictureBox3.Location = new Point(472, 127);
+            pictureBox3.Location = new Point(517, 159);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(33, 17);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 9;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
-            // textBox3
+            // password2
             // 
-            textBox3.Anchor = AnchorStyles.Left;
-            textBox3.BackColor = Color.FromArgb(255, 255, 128);
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(366, 168);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 8;
+            password2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            password2.BackColor = Color.FromArgb(237, 232, 214);
+            password2.BorderStyle = BorderStyle.FixedSingle;
+            password2.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            password2.Location = new Point(359, 205);
+            password2.Margin = new Padding(3, 2, 3, 2);
+            password2.Name = "password2";
+            password2.PasswordChar = '*';
+            password2.Size = new Size(152, 30);
+            password2.TabIndex = 8;
             // 
             // pictureBox2
             // 
             pictureBox2.Anchor = AnchorStyles.Left;
             pictureBox2.Image = Properties.Resources.pesas;
-            pictureBox2.Location = new Point(697, 269);
+            pictureBox2.Location = new Point(714, 296);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(92, 45);
+            pictureBox2.Size = new Size(77, 45);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 14;
             pictureBox2.TabStop = false;
@@ -323,7 +331,7 @@
             bt_registrar.FlatAppearance.BorderSize = 2;
             bt_registrar.FlatStyle = FlatStyle.Flat;
             bt_registrar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            bt_registrar.Location = new Point(36, 270);
+            bt_registrar.Location = new Point(38, 296);
             bt_registrar.Name = "bt_registrar";
             bt_registrar.Size = new Size(121, 44);
             bt_registrar.TabIndex = 16;
@@ -337,12 +345,13 @@
             bt_limpiar.FlatAppearance.BorderSize = 2;
             bt_limpiar.FlatStyle = FlatStyle.Flat;
             bt_limpiar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            bt_limpiar.Location = new Point(223, 270);
+            bt_limpiar.Location = new Point(222, 296);
             bt_limpiar.Name = "bt_limpiar";
             bt_limpiar.Size = new Size(109, 44);
             bt_limpiar.TabIndex = 17;
             bt_limpiar.Text = "LIMPIAR";
             bt_limpiar.UseVisualStyleBackColor = false;
+            bt_limpiar.Click += bt_limpiar_Click;
             // 
             // button5
             // 
@@ -351,29 +360,31 @@
             button5.FlatAppearance.BorderSize = 2;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(582, 270);
+            button5.Location = new Point(599, 296);
             button5.Name = "button5";
             button5.Size = new Size(109, 44);
             button5.TabIndex = 18;
             button5.Text = "REGRESAR";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.BackColor = Color.FromArgb(255, 255, 128);
             tableLayoutPanel3.ColumnCount = 3;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel3.Controls.Add(pictureBox4, 0, 0);
             tableLayoutPanel3.Controls.Add(pictureBox1, 2, 0);
             tableLayoutPanel3.Controls.Add(label2, 1, 0);
-            tableLayoutPanel3.Location = new Point(3, 2);
+            tableLayoutPanel3.Dock = DockStyle.Top;
+            tableLayoutPanel3.Location = new Point(0, 0);
             tableLayoutPanel3.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(792, 55);
+            tableLayoutPanel3.Size = new Size(794, 55);
             tableLayoutPanel3.TabIndex = 2;
             tableLayoutPanel3.Paint += tableLayoutPanel3_Paint;
             // 
@@ -385,7 +396,7 @@
             pictureBox4.Location = new Point(3, 2);
             pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(226, 51);
+            pictureBox4.Size = new Size(192, 51);
             pictureBox4.TabIndex = 2;
             pictureBox4.TabStop = false;
             // 
@@ -394,10 +405,10 @@
             pictureBox1.BackgroundImage = Properties.Resources.pesas;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(570, 2);
+            pictureBox1.Location = new Point(598, 2);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(262, 51);
+            pictureBox1.Size = new Size(193, 51);
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
@@ -406,9 +417,9 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Comic Sans MS", 17.8348637F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(235, 0);
+            label2.Location = new Point(201, 0);
             label2.Name = "label2";
-            label2.Size = new Size(329, 55);
+            label2.Size = new Size(391, 55);
             label2.TabIndex = 3;
             label2.Text = "REGISTRO DE USUARIOS";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -451,9 +462,9 @@
         private TableLayoutPanel tableLayoutPanel3;
         private PictureBox pictureBox5;
         private PictureBox pictureBox3;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox password2;
+        private TextBox password1;
+        private TextBox usuario;
         private Label label5;
         private Label label4;
         private PictureBox pictureBox4;

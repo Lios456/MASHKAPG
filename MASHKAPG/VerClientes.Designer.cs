@@ -113,7 +113,7 @@
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.menos;
+            button1.BackgroundImage = Properties.Resources.minimizar;
             button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.Dock = DockStyle.Fill;
             button1.FlatAppearance.BorderColor = Color.White;
@@ -128,7 +128,7 @@
             // 
             // button2
             // 
-            button2.BackgroundImage = Properties.Resources.maximizar;
+            button2.BackgroundImage = Properties.Resources.opcion_de_maximizar_tamano;
             button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.Dock = DockStyle.Fill;
             button2.FlatAppearance.BorderSize = 0;
@@ -142,7 +142,7 @@
             // 
             // button3
             // 
-            button3.BackgroundImage = Properties.Resources.cerrar_sesion;
+            button3.BackgroundImage = Properties.Resources.boton_salir_a_la_aplicacion;
             button3.BackgroundImageLayout = ImageLayout.Zoom;
             button3.Dock = DockStyle.Fill;
             button3.FlatAppearance.BorderSize = 0;
