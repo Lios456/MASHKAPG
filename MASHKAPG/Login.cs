@@ -16,10 +16,7 @@ namespace MASHKAPG
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void ver_con_Click(object sender, EventArgs e)
         {
@@ -59,6 +56,10 @@ namespace MASHKAPG
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
@@ -70,12 +71,10 @@ namespace MASHKAPG
                 this.WindowState = FormWindowState.Maximized;
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            Application.Exit();
         }
-
         private void tableLayoutPanel2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
