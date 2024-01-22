@@ -37,24 +37,24 @@
             panel1 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
+            bt_regresar = new Button();
+            pictureBox3 = new PictureBox();
             tableLayoutPanel5 = new TableLayoutPanel();
+            pictureBox2 = new PictureBox();
+            bt_administrarclientes = new Button();
             tableLayoutPanel6 = new TableLayoutPanel();
             pictureBox1 = new PictureBox();
             bt_nuevocliente = new Button();
-            pictureBox2 = new PictureBox();
-            bt_administrarclientes = new Button();
-            bt_regresar = new Button();
-            pictureBox3 = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -182,8 +182,8 @@
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 71.8670044F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 28.1329918F));
             tableLayoutPanel4.Controls.Add(bt_regresar, 0, 0);
             tableLayoutPanel4.Controls.Add(pictureBox3, 1, 0);
             tableLayoutPanel4.Dock = DockStyle.Fill;
@@ -193,6 +193,32 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel4.Size = new Size(391, 77);
             tableLayoutPanel4.TabIndex = 0;
+            // 
+            // bt_regresar
+            // 
+            bt_regresar.Anchor = AnchorStyles.Right;
+            bt_regresar.BackColor = Color.Yellow;
+            bt_regresar.FlatAppearance.BorderSize = 2;
+            bt_regresar.FlatStyle = FlatStyle.Flat;
+            bt_regresar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            bt_regresar.Location = new Point(168, 16);
+            bt_regresar.Name = "bt_regresar";
+            bt_regresar.Size = new Size(109, 44);
+            bt_regresar.TabIndex = 0;
+            bt_regresar.Text = "REGRESAR";
+            bt_regresar.UseVisualStyleBackColor = false;
+            bt_regresar.Click += bt_regresar_Click;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Anchor = AnchorStyles.Left;
+            pictureBox3.BackgroundImage = Properties.Resources.pesas;
+            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox3.Location = new Point(283, 13);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(100, 50);
+            pictureBox3.TabIndex = 1;
+            pictureBox3.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -208,6 +234,31 @@
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel5.Size = new Size(391, 321);
             tableLayoutPanel5.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.pngtree_silhouettes_of_bodybuilder_and_fat_man_pursy_dense_obese_vector_png_image_5922886;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Dock = DockStyle.Fill;
+            pictureBox2.Location = new Point(3, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(385, 234);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
+            // bt_administrarclientes
+            // 
+            bt_administrarclientes.Anchor = AnchorStyles.None;
+            bt_administrarclientes.BackColor = Color.White;
+            bt_administrarclientes.FlatAppearance.BorderSize = 2;
+            bt_administrarclientes.FlatStyle = FlatStyle.Flat;
+            bt_administrarclientes.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            bt_administrarclientes.Location = new Point(92, 244);
+            bt_administrarclientes.Name = "bt_administrarclientes";
+            bt_administrarclientes.Size = new Size(207, 73);
+            bt_administrarclientes.TabIndex = 1;
+            bt_administrarclientes.Text = "ADMINISTRAR CLIENTES";
+            bt_administrarclientes.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel6
             // 
@@ -249,57 +300,6 @@
             bt_nuevocliente.Text = "NUEVO CLIENTE";
             bt_nuevocliente.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources.pngtree_silhouettes_of_bodybuilder_and_fat_man_pursy_dense_obese_vector_png_image_5922886;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Dock = DockStyle.Fill;
-            pictureBox2.Location = new Point(3, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(385, 234);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
-            // bt_administrarclientes
-            // 
-            bt_administrarclientes.Anchor = AnchorStyles.None;
-            bt_administrarclientes.BackColor = Color.White;
-            bt_administrarclientes.FlatAppearance.BorderSize = 2;
-            bt_administrarclientes.FlatStyle = FlatStyle.Flat;
-            bt_administrarclientes.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            bt_administrarclientes.Location = new Point(92, 244);
-            bt_administrarclientes.Name = "bt_administrarclientes";
-            bt_administrarclientes.Size = new Size(207, 73);
-            bt_administrarclientes.TabIndex = 1;
-            bt_administrarclientes.Text = "ADMINISTRAR CLIENTES";
-            bt_administrarclientes.UseVisualStyleBackColor = false;
-            // 
-            // bt_regresar
-            // 
-            bt_regresar.Anchor = AnchorStyles.Right;
-            bt_regresar.BackColor = Color.Yellow;
-            bt_regresar.FlatAppearance.BorderSize = 2;
-            bt_regresar.FlatStyle = FlatStyle.Flat;
-            bt_regresar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            bt_regresar.Location = new Point(83, 16);
-            bt_regresar.Name = "bt_regresar";
-            bt_regresar.Size = new Size(109, 44);
-            bt_regresar.TabIndex = 0;
-            bt_regresar.Text = "REGRESAR";
-            bt_regresar.UseVisualStyleBackColor = false;
-            bt_regresar.Click += bt_regresar_Click;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Anchor = AnchorStyles.Left;
-            pictureBox3.BackgroundImage = Properties.Resources.pesas;
-            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox3.Location = new Point(198, 13);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(100, 50);
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
-            // 
             // Vistausu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -316,11 +316,11 @@
             panel1.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tableLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
