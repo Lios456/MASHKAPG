@@ -259,6 +259,7 @@
             bt_administrarclientes.TabIndex = 1;
             bt_administrarclientes.Text = "ADMINISTRAR CLIENTES";
             bt_administrarclientes.UseVisualStyleBackColor = false;
+            bt_administrarclientes.Click += bt_administrarclientes_Click;
             // 
             // tableLayoutPanel6
             // 
@@ -299,6 +300,7 @@
             bt_nuevocliente.TabIndex = 1;
             bt_nuevocliente.Text = "NUEVO CLIENTE";
             bt_nuevocliente.UseVisualStyleBackColor = false;
+            bt_nuevocliente.Click += bt_nuevocliente_Click;
             // 
             // Vistausu
             // 

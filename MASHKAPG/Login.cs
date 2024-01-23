@@ -6,6 +6,7 @@ namespace MASHKAPG
     public partial class Login : Form
     {
         private int intentos = 3;
+        private Usuario usuarioact = new Usuario();
 
         public Login()
         {
@@ -32,17 +33,33 @@ namespace MASHKAPG
 
         private void bt_login_Click(object sender, EventArgs e)
         {
+            // Se comprueba que la contraseña del usuario sea la misma que la que está en la base de datos
             var datos = new ConexionMysql().GetList($"select * from usuario where Nombre = '{usuario.Text}'");
             var nombre = datos[0];
             var pass = datos[1];
             if (usuario.Text == nombre && Usuario.GetMD5(password.Text) == pass)
             {
-                MessageBox.Show("Bienvenido");
-                new VistaAdmin().Show();
+                usuarioact.Tipo = new ConexionMysql().consultaUsuarios($"select * from usuario where Nombre = '{usuario.Text}'")[0].Tipo;
+                usuarioact.usuarioName = new ConexionMysql().consultaUsuarios($"select * from usuario where Nombre = '{usuario.Text}'")[0].usuarioName;
+                MessageBox.Show("Bienvenido:  "+usuarioact.usuarioPassword+ "  " + usuarioact.Tipo);
+                // Si el tipo de usuario es "admin" se abre la vista de administradores, sino, se abre la vista de usuarios
+                
+                if(usuarioact.Tipo == "admin")
+                {
+                    new VistaAdmin().Show();
+                    
+                }
+                else
+                {
+                    new Vistausu().Show();
+                    
+                }
                 this.Hide();
+           
             }
             else
             {
+                // Se controlan los intentos de ingreso de contraseña
                 if (intentos <= 0)
                 {
                     MessageBox.Show("No te quedan intentos, vuelve a iniciar la aplicación.");

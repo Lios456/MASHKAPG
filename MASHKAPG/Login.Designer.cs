@@ -36,34 +36,34 @@
             label1 = new Label();
             panel1 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
-            pictureBox1 = new PictureBox();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            pictureBox2 = new PictureBox();
-            tableLayoutPanel5 = new TableLayoutPanel();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            label3 = new Label();
-            password = new TextBox();
-            ver_con = new Button();
-            tableLayoutPanel7 = new TableLayoutPanel();
-            label2 = new Label();
-            usuario = new TextBox();
             tableLayoutPanel8 = new TableLayoutPanel();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             bt_login = new Button();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            tableLayoutPanel7 = new TableLayoutPanel();
+            usuario = new TextBox();
+            label2 = new Label();
+            tableLayoutPanel6 = new TableLayoutPanel();
+            ver_con = new Button();
+            password = new TextBox();
+            label3 = new Label();
+            pictureBox2 = new PictureBox();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            pictureBox1 = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            tableLayoutPanel5.SuspendLayout();
-            tableLayoutPanel6.SuspendLayout();
-            tableLayoutPanel7.SuspendLayout();
             tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            tableLayoutPanel5.SuspendLayout();
+            tableLayoutPanel7.SuspendLayout();
+            tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -186,152 +186,6 @@
             tableLayoutPanel3.Size = new Size(794, 466);
             tableLayoutPanel3.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.logo_MASHKAPG_removebg_preview;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(788, 133);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
-            tableLayoutPanel4.Controls.Add(pictureBox2, 0, 0);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 1, 0);
-            tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(3, 142);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 1;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(788, 227);
-            tableLayoutPanel4.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources.hombre_musculoso;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(3, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(151, 219);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.ColumnCount = 1;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Controls.Add(tableLayoutPanel6, 0, 1);
-            tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 0, 0);
-            tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(160, 3);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 2;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(625, 221);
-            tableLayoutPanel5.TabIndex = 1;
-            // 
-            // tableLayoutPanel6
-            // 
-            tableLayoutPanel6.ColumnCount = 3;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.6025848F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 57.99677F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 8.239096F));
-            tableLayoutPanel6.Controls.Add(label3, 0, 0);
-            tableLayoutPanel6.Controls.Add(password, 1, 0);
-            tableLayoutPanel6.Controls.Add(ver_con, 2, 0);
-            tableLayoutPanel6.Dock = DockStyle.Fill;
-            tableLayoutPanel6.Location = new Point(3, 113);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 1;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(619, 105);
-            tableLayoutPanel6.TabIndex = 0;
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.None;
-            label3.BackColor = Color.Black;
-            label3.Font = new Font("Comic Sans MS", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(47, 36);
-            label3.Name = "label3";
-            label3.Size = new Size(114, 32);
-            label3.TabIndex = 0;
-            label3.Text = "Contraseña:";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // password
-            // 
-            password.Anchor = AnchorStyles.Left;
-            password.BackColor = Color.White;
-            password.BorderStyle = BorderStyle.FixedSingle;
-            password.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            password.Location = new Point(211, 35);
-            password.Name = "password";
-            password.PasswordChar = '*';
-            password.Size = new Size(302, 34);
-            password.TabIndex = 1;
-            // 
-            // ver_con
-            // 
-            ver_con.Anchor = AnchorStyles.None;
-            ver_con.BackgroundImage = Properties.Resources.ojo;
-            ver_con.BackgroundImageLayout = ImageLayout.Zoom;
-            ver_con.FlatAppearance.BorderSize = 0;
-            ver_con.FlatStyle = FlatStyle.Flat;
-            ver_con.Location = new Point(570, 39);
-            ver_con.Name = "ver_con";
-            ver_con.Size = new Size(46, 26);
-            ver_con.TabIndex = 2;
-            ver_con.UseVisualStyleBackColor = true;
-            ver_con.Click += ver_con_Click;
-            // 
-            // tableLayoutPanel7
-            // 
-            tableLayoutPanel7.ColumnCount = 2;
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.6666641F));
-            tableLayoutPanel7.Controls.Add(label2, 0, 0);
-            tableLayoutPanel7.Controls.Add(usuario, 1, 0);
-            tableLayoutPanel7.Dock = DockStyle.Fill;
-            tableLayoutPanel7.Location = new Point(3, 3);
-            tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 1;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.Size = new Size(619, 104);
-            tableLayoutPanel7.TabIndex = 1;
-            // 
-            // label2
-            // 
-            label2.Anchor = AnchorStyles.None;
-            label2.BackColor = Color.Black;
-            label2.Font = new Font("Comic Sans MS", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(46, 36);
-            label2.Name = "label2";
-            label2.Size = new Size(114, 32);
-            label2.TabIndex = 0;
-            label2.Text = "Usuario:";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // usuario
-            // 
-            usuario.Anchor = AnchorStyles.Left;
-            usuario.BackColor = Color.White;
-            usuario.BorderStyle = BorderStyle.FixedSingle;
-            usuario.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            usuario.Location = new Point(209, 35);
-            usuario.Name = "usuario";
-            usuario.Size = new Size(302, 34);
-            usuario.TabIndex = 1;
-            // 
             // tableLayoutPanel8
             // 
             tableLayoutPanel8.ColumnCount = 3;
@@ -387,6 +241,153 @@
             bt_login.UseVisualStyleBackColor = false;
             bt_login.Click += bt_login_Click;
             // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 1;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Controls.Add(tableLayoutPanel6, 0, 1);
+            tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 0, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(160, 3);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 2;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Size = new Size(625, 221);
+            tableLayoutPanel5.TabIndex = 1;
+            // 
+            // tableLayoutPanel7
+            // 
+            tableLayoutPanel7.ColumnCount = 2;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.6666641F));
+            tableLayoutPanel7.Controls.Add(label2, 0, 0);
+            tableLayoutPanel7.Controls.Add(usuario, 1, 0);
+            tableLayoutPanel7.Dock = DockStyle.Fill;
+            tableLayoutPanel7.Location = new Point(3, 3);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 1;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.Size = new Size(619, 104);
+            tableLayoutPanel7.TabIndex = 1;
+            // 
+            // usuario
+            // 
+            usuario.Anchor = AnchorStyles.Left;
+            usuario.BackColor = Color.White;
+            usuario.BorderStyle = BorderStyle.FixedSingle;
+            usuario.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            usuario.Location = new Point(209, 35);
+            usuario.Name = "usuario";
+            usuario.Size = new Size(302, 34);
+            usuario.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.None;
+            label2.BackColor = Color.Black;
+            label2.Font = new Font("Comic Sans MS", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(46, 36);
+            label2.Name = "label2";
+            label2.Size = new Size(114, 32);
+            label2.TabIndex = 0;
+            label2.Text = "Usuario:";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel6
+            // 
+            tableLayoutPanel6.ColumnCount = 3;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.6025848F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 57.99677F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 8.239096F));
+            tableLayoutPanel6.Controls.Add(label3, 0, 0);
+            tableLayoutPanel6.Controls.Add(password, 1, 0);
+            tableLayoutPanel6.Controls.Add(ver_con, 2, 0);
+            tableLayoutPanel6.Dock = DockStyle.Fill;
+            tableLayoutPanel6.Location = new Point(3, 113);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 1;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.Size = new Size(619, 105);
+            tableLayoutPanel6.TabIndex = 0;
+            // 
+            // ver_con
+            // 
+            ver_con.Anchor = AnchorStyles.None;
+            ver_con.BackgroundImage = Properties.Resources.ojo;
+            ver_con.BackgroundImageLayout = ImageLayout.Zoom;
+            ver_con.FlatAppearance.BorderSize = 0;
+            ver_con.FlatStyle = FlatStyle.Flat;
+            ver_con.Location = new Point(570, 39);
+            ver_con.Name = "ver_con";
+            ver_con.Size = new Size(46, 26);
+            ver_con.TabIndex = 2;
+            ver_con.UseVisualStyleBackColor = true;
+            ver_con.Click += ver_con_Click;
+            // 
+            // password
+            // 
+            password.Anchor = AnchorStyles.Left;
+            password.BackColor = Color.White;
+            password.BorderStyle = BorderStyle.FixedSingle;
+            password.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            password.Location = new Point(211, 35);
+            password.Name = "password";
+            password.PasswordChar = '*';
+            password.Size = new Size(302, 34);
+            password.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.None;
+            label3.BackColor = Color.Black;
+            label3.Font = new Font("Comic Sans MS", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(47, 36);
+            label3.Name = "label3";
+            label3.Size = new Size(114, 32);
+            label3.TabIndex = 0;
+            label3.Text = "Contraseña:";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.hombre_musculoso;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Dock = DockStyle.Fill;
+            pictureBox2.Location = new Point(3, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(151, 221);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
+            tableLayoutPanel4.Controls.Add(pictureBox2, 0, 0);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 1, 0);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(3, 142);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.Size = new Size(788, 227);
+            tableLayoutPanel4.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.logo_MASHKAPG_removebg_preview;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(788, 133);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -404,17 +405,17 @@
             tableLayoutPanel2.PerformLayout();
             panel1.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            tableLayoutPanel5.ResumeLayout(false);
-            tableLayoutPanel6.ResumeLayout(false);
-            tableLayoutPanel6.PerformLayout();
-            tableLayoutPanel7.ResumeLayout(false);
-            tableLayoutPanel7.PerformLayout();
             tableLayoutPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel7.ResumeLayout(false);
+            tableLayoutPanel7.PerformLayout();
+            tableLayoutPanel6.ResumeLayout(false);
+            tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -428,20 +429,20 @@
         private Label label1;
         private Panel panel1;
         private TableLayoutPanel tableLayoutPanel3;
+        private TableLayoutPanel tableLayoutPanel8;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private Button bt_login;
         private PictureBox pictureBox1;
         private TableLayoutPanel tableLayoutPanel4;
         private PictureBox pictureBox2;
         private TableLayoutPanel tableLayoutPanel5;
         private TableLayoutPanel tableLayoutPanel6;
-        private TableLayoutPanel tableLayoutPanel7;
         private Label label3;
-        private Label label2;
-        private TextBox usuario;
         private TextBox password;
         private Button ver_con;
-        private TableLayoutPanel tableLayoutPanel8;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private Button bt_login;
+        private TableLayoutPanel tableLayoutPanel7;
+        private Label label2;
+        private TextBox usuario;
     }
 }

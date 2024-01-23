@@ -9,10 +9,12 @@ namespace MASHKAPG.clases
 {
     public class Usuario
     {
-        private int? id { get; set; }
-        private string? usuarioName { get; set; }
+        public int? id { get; set; }
+        public string? usuarioName { get; set; }
 
-        private string? usuarioPassword { get; set; }
+        public string? usuarioPassword { get; set; }
+
+        public string? Tipo { get; set; }
         public static string GetMD5(string str)
         {
             using (MD5 md5 = MD5.Create())
@@ -27,6 +29,8 @@ namespace MASHKAPG.clases
                 return sb.ToString();
             }
         }
+
+    
 
 
 

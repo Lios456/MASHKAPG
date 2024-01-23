@@ -55,5 +55,30 @@ namespace MASHKAPG
         {
 
         }
+
+        private void bt_regresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Login().Show();
+
+        }
+
+        private void bt_nuevocliente_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new RegistrarClientes().Show();
+        }
+
+        private void bt_administrarclientes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new VerClientes().Show();
+        }
+
+        private void bt_nuevousuario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new RegistrarUsuarios().Show();
+        }
     }
 }

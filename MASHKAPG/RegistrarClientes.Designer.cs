@@ -38,18 +38,18 @@
             tableLayoutPanel7 = new TableLayoutPanel();
             tableLayoutPanel5 = new TableLayoutPanel();
             label10 = new Label();
-            textBox7 = new TextBox();
+            tx_peso = new TextBox();
             label9 = new Label();
-            textBox8 = new TextBox();
+            tx_talla = new TextBox();
             tableLayoutPanel6 = new TableLayoutPanel();
             label11 = new Label();
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            tx_horario = new TextBox();
+            tx_objetivo = new TextBox();
+            tx_observaciones = new TextBox();
+            tx_fechain = new DateTimePicker();
             tableLayoutPanel3 = new TableLayoutPanel();
             label2 = new Label();
             label3 = new Label();
@@ -57,12 +57,12 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
+            tx_nombre = new TextBox();
+            tx_apellido = new TextBox();
+            tx_cedula = new TextBox();
+            tx_direccion = new TextBox();
+            tx_edad = new TextBox();
+            tx_telefono = new TextBox();
             tableLayoutPanel8 = new TableLayoutPanel();
             bt_registrar = new Button();
             bt_limpiar = new Button();
@@ -183,7 +183,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(210, 210, 212);
             panel1.BackgroundImage = Properties.Resources.logo_MASHKAPG_opaco;
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
             panel1.Controls.Add(tableLayoutPanel7);
@@ -224,9 +224,9 @@
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 57F));
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 135F));
             tableLayoutPanel5.Controls.Add(label10, 0, 0);
-            tableLayoutPanel5.Controls.Add(textBox7, 0, 0);
+            tableLayoutPanel5.Controls.Add(tx_peso, 0, 0);
             tableLayoutPanel5.Controls.Add(label9, 0, 0);
-            tableLayoutPanel5.Controls.Add(textBox8, 3, 0);
+            tableLayoutPanel5.Controls.Add(tx_talla, 3, 0);
             tableLayoutPanel5.Dock = DockStyle.Fill;
             tableLayoutPanel5.Location = new Point(454, 2);
             tableLayoutPanel5.Margin = new Padding(3, 2, 3, 2);
@@ -240,47 +240,47 @@
             // 
             label10.Anchor = AnchorStyles.Right;
             label10.AutoSize = true;
-            label10.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(260, 12);
+            label10.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(260, 0);
             label10.Name = "label10";
-            label10.Size = new Size(47, 20);
+            label10.Size = new Size(47, 45);
             label10.TabIndex = 9;
             label10.Text = "Talla:";
             label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox7
+            // tx_peso
             // 
-            textBox7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox7.BackColor = Color.FromArgb(237, 232, 214);
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(125, 11);
-            textBox7.Margin = new Padding(3, 2, 3, 2);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(125, 23);
-            textBox7.TabIndex = 7;
+            tx_peso.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            tx_peso.BackColor = Color.LightGoldenrodYellow;
+            tx_peso.BorderStyle = BorderStyle.FixedSingle;
+            tx_peso.Location = new Point(125, 11);
+            tx_peso.Margin = new Padding(3, 2, 3, 2);
+            tx_peso.Name = "tx_peso";
+            tx_peso.Size = new Size(125, 23);
+            tx_peso.TabIndex = 7;
             // 
             // label9
             // 
             label9.Anchor = AnchorStyles.Right;
             label9.AutoSize = true;
-            label9.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(75, 12);
+            label9.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(73, 11);
             label9.Name = "label9";
-            label9.Size = new Size(44, 20);
+            label9.Size = new Size(46, 23);
             label9.TabIndex = 1;
             label9.Text = "Peso:";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox8
+            // tx_talla
             // 
-            textBox8.Anchor = AnchorStyles.Left;
-            textBox8.BackColor = Color.FromArgb(237, 232, 214);
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(313, 11);
-            textBox8.Margin = new Padding(3, 2, 3, 2);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(79, 23);
-            textBox8.TabIndex = 8;
+            tx_talla.Anchor = AnchorStyles.Left;
+            tx_talla.BackColor = Color.LightGoldenrodYellow;
+            tx_talla.BorderStyle = BorderStyle.FixedSingle;
+            tx_talla.Location = new Point(313, 11);
+            tx_talla.Margin = new Padding(3, 2, 3, 2);
+            tx_talla.Name = "tx_talla";
+            tx_talla.Size = new Size(79, 23);
+            tx_talla.TabIndex = 8;
             // 
             // tableLayoutPanel6
             // 
@@ -292,10 +292,10 @@
             tableLayoutPanel6.Controls.Add(label12, 0, 1);
             tableLayoutPanel6.Controls.Add(label13, 0, 2);
             tableLayoutPanel6.Controls.Add(label14, 0, 3);
-            tableLayoutPanel6.Controls.Add(textBox9, 1, 0);
-            tableLayoutPanel6.Controls.Add(textBox10, 1, 1);
-            tableLayoutPanel6.Controls.Add(textBox11, 1, 2);
-            tableLayoutPanel6.Controls.Add(dateTimePicker1, 1, 3);
+            tableLayoutPanel6.Controls.Add(tx_horario, 1, 0);
+            tableLayoutPanel6.Controls.Add(tx_objetivo, 1, 1);
+            tableLayoutPanel6.Controls.Add(tx_observaciones, 1, 2);
+            tableLayoutPanel6.Controls.Add(tx_fechain, 1, 3);
             tableLayoutPanel6.Dock = DockStyle.Fill;
             tableLayoutPanel6.Location = new Point(454, 51);
             tableLayoutPanel6.Margin = new Padding(3, 2, 3, 2);
@@ -312,10 +312,10 @@
             // 
             label11.Anchor = AnchorStyles.Right;
             label11.AutoSize = true;
-            label11.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(41, 32);
+            label11.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(36, 30);
             label11.Name = "label11";
-            label11.Size = new Size(67, 20);
+            label11.Size = new Size(72, 23);
             label11.TabIndex = 0;
             label11.Text = "Horario:";
             label11.TextAlign = ContentAlignment.MiddleCenter;
@@ -324,10 +324,10 @@
             // 
             label12.Anchor = AnchorStyles.Right;
             label12.AutoSize = true;
-            label12.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(34, 116);
+            label12.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(28, 114);
             label12.Name = "label12";
-            label12.Size = new Size(74, 20);
+            label12.Size = new Size(80, 23);
             label12.TabIndex = 1;
             label12.Text = "Objetivo:";
             label12.TextAlign = ContentAlignment.MiddleCenter;
@@ -336,10 +336,10 @@
             // 
             label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label13.AutoSize = true;
-            label13.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(5, 168);
+            label13.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(7, 168);
             label13.Name = "label13";
-            label13.Size = new Size(103, 40);
+            label13.Size = new Size(101, 46);
             label13.TabIndex = 2;
             label13.Text = "Observaciones:";
             label13.TextAlign = ContentAlignment.MiddleCenter;
@@ -348,56 +348,57 @@
             // 
             label14.Anchor = AnchorStyles.Right;
             label14.AutoSize = true;
-            label14.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(37, 275);
+            label14.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(34, 272);
             label14.Name = "label14";
-            label14.Size = new Size(71, 40);
+            label14.Size = new Size(74, 46);
             label14.TabIndex = 3;
             label14.Text = "Fecha de Ingreso:";
             label14.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox9
+            // tx_horario
             // 
-            textBox9.Anchor = AnchorStyles.Left;
-            textBox9.BackColor = Color.FromArgb(237, 232, 214);
-            textBox9.BorderStyle = BorderStyle.FixedSingle;
-            textBox9.Location = new Point(114, 30);
-            textBox9.Margin = new Padding(3, 2, 3, 2);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(267, 23);
-            textBox9.TabIndex = 6;
+            tx_horario.Anchor = AnchorStyles.Left;
+            tx_horario.BackColor = Color.LightGoldenrodYellow;
+            tx_horario.BorderStyle = BorderStyle.FixedSingle;
+            tx_horario.Location = new Point(114, 30);
+            tx_horario.Margin = new Padding(3, 2, 3, 2);
+            tx_horario.Name = "tx_horario";
+            tx_horario.Size = new Size(267, 23);
+            tx_horario.TabIndex = 6;
             // 
-            // textBox10
+            // tx_objetivo
             // 
-            textBox10.Anchor = AnchorStyles.Left;
-            textBox10.BackColor = Color.FromArgb(237, 232, 214);
-            textBox10.BorderStyle = BorderStyle.FixedSingle;
-            textBox10.Location = new Point(114, 114);
-            textBox10.Margin = new Padding(3, 2, 3, 2);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(267, 23);
-            textBox10.TabIndex = 7;
+            tx_objetivo.Anchor = AnchorStyles.Left;
+            tx_objetivo.BackColor = Color.LightGoldenrodYellow;
+            tx_objetivo.BorderStyle = BorderStyle.FixedSingle;
+            tx_objetivo.Location = new Point(114, 114);
+            tx_objetivo.Margin = new Padding(3, 2, 3, 2);
+            tx_objetivo.Name = "tx_objetivo";
+            tx_objetivo.Size = new Size(267, 23);
+            tx_objetivo.TabIndex = 7;
             // 
-            // textBox11
+            // tx_observaciones
             // 
-            textBox11.Anchor = AnchorStyles.Left;
-            textBox11.BackColor = Color.FromArgb(237, 232, 214);
-            textBox11.BorderStyle = BorderStyle.FixedSingle;
-            textBox11.Location = new Point(114, 170);
-            textBox11.Margin = new Padding(3, 2, 3, 2);
-            textBox11.Multiline = true;
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(267, 80);
-            textBox11.TabIndex = 8;
+            tx_observaciones.Anchor = AnchorStyles.Left;
+            tx_observaciones.BackColor = Color.LightGoldenrodYellow;
+            tx_observaciones.BorderStyle = BorderStyle.FixedSingle;
+            tx_observaciones.Location = new Point(114, 170);
+            tx_observaciones.Margin = new Padding(3, 2, 3, 2);
+            tx_observaciones.Multiline = true;
+            tx_observaciones.Name = "tx_observaciones";
+            tx_observaciones.Size = new Size(267, 80);
+            tx_observaciones.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // tx_fechain
             // 
-            dateTimePicker1.Anchor = AnchorStyles.Left;
-            dateTimePicker1.Location = new Point(114, 284);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(267, 23);
-            dateTimePicker1.TabIndex = 9;
+            tx_fechain.Anchor = AnchorStyles.Left;
+            tx_fechain.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_fechain.Location = new Point(114, 280);
+            tx_fechain.Margin = new Padding(3, 2, 3, 2);
+            tx_fechain.Name = "tx_fechain";
+            tx_fechain.Size = new Size(267, 30);
+            tx_fechain.TabIndex = 9;
             // 
             // tableLayoutPanel3
             // 
@@ -411,12 +412,12 @@
             tableLayoutPanel3.Controls.Add(label5, 0, 3);
             tableLayoutPanel3.Controls.Add(label6, 0, 4);
             tableLayoutPanel3.Controls.Add(label7, 0, 5);
-            tableLayoutPanel3.Controls.Add(textBox1, 1, 0);
-            tableLayoutPanel3.Controls.Add(textBox2, 1, 1);
-            tableLayoutPanel3.Controls.Add(textBox3, 1, 2);
-            tableLayoutPanel3.Controls.Add(textBox6, 1, 5);
-            tableLayoutPanel3.Controls.Add(textBox5, 1, 3);
-            tableLayoutPanel3.Controls.Add(textBox4, 1, 4);
+            tableLayoutPanel3.Controls.Add(tx_nombre, 1, 0);
+            tableLayoutPanel3.Controls.Add(tx_apellido, 1, 1);
+            tableLayoutPanel3.Controls.Add(tx_cedula, 1, 2);
+            tableLayoutPanel3.Controls.Add(tx_direccion, 1, 5);
+            tableLayoutPanel3.Controls.Add(tx_edad, 1, 3);
+            tableLayoutPanel3.Controls.Add(tx_telefono, 1, 4);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(3, 51);
             tableLayoutPanel3.Margin = new Padding(3, 2, 3, 2);
@@ -436,10 +437,10 @@
             // 
             label2.Anchor = AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(112, 18);
+            label2.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(107, 16);
             label2.Name = "label2";
-            label2.Size = new Size(68, 20);
+            label2.Size = new Size(73, 23);
             label2.TabIndex = 0;
             label2.Text = "Nombre:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -448,10 +449,10 @@
             // 
             label3.Anchor = AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(111, 74);
+            label3.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(104, 72);
             label3.Name = "label3";
-            label3.Size = new Size(69, 20);
+            label3.Size = new Size(76, 23);
             label3.TabIndex = 1;
             label3.Text = "Apellido:";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -460,10 +461,10 @@
             // 
             label4.Anchor = AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(121, 130);
+            label4.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(117, 128);
             label4.Name = "label4";
-            label4.Size = new Size(59, 20);
+            label4.Size = new Size(63, 23);
             label4.TabIndex = 2;
             label4.Text = "Cédula:";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -472,10 +473,10 @@
             // 
             label5.Anchor = AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(132, 186);
+            label5.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(129, 184);
             label5.Name = "label5";
-            label5.Size = new Size(48, 20);
+            label5.Size = new Size(51, 23);
             label5.TabIndex = 3;
             label5.Text = "Edad:";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -484,10 +485,10 @@
             // 
             label6.Anchor = AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(83, 242);
+            label6.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(76, 240);
             label6.Name = "label6";
-            label6.Size = new Size(97, 20);
+            label6.Size = new Size(104, 23);
             label6.TabIndex = 4;
             label6.Text = "N° Telefono:";
             label6.TextAlign = ContentAlignment.MiddleCenter;
@@ -496,79 +497,79 @@
             // 
             label7.Anchor = AnchorStyles.Right;
             label7.AutoSize = true;
-            label7.Font = new Font("Comic Sans MS", 11.2293577F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(101, 299);
+            label7.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(95, 298);
             label7.Name = "label7";
-            label7.Size = new Size(79, 20);
+            label7.Size = new Size(85, 23);
             label7.TabIndex = 5;
             label7.Text = "Dirección:";
             label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // tx_nombre
             // 
-            textBox1.Anchor = AnchorStyles.Right;
-            textBox1.BackColor = Color.FromArgb(237, 232, 214);
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(235, 16);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(207, 23);
-            textBox1.TabIndex = 6;
+            tx_nombre.Anchor = AnchorStyles.Right;
+            tx_nombre.BackColor = Color.LightGoldenrodYellow;
+            tx_nombre.BorderStyle = BorderStyle.FixedSingle;
+            tx_nombre.Location = new Point(235, 16);
+            tx_nombre.Margin = new Padding(3, 2, 3, 2);
+            tx_nombre.Name = "tx_nombre";
+            tx_nombre.Size = new Size(207, 23);
+            tx_nombre.TabIndex = 6;
             // 
-            // textBox2
+            // tx_apellido
             // 
-            textBox2.Anchor = AnchorStyles.Right;
-            textBox2.BackColor = Color.FromArgb(237, 232, 214);
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(235, 72);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(207, 23);
-            textBox2.TabIndex = 7;
+            tx_apellido.Anchor = AnchorStyles.Right;
+            tx_apellido.BackColor = Color.LightGoldenrodYellow;
+            tx_apellido.BorderStyle = BorderStyle.FixedSingle;
+            tx_apellido.Location = new Point(235, 72);
+            tx_apellido.Margin = new Padding(3, 2, 3, 2);
+            tx_apellido.Name = "tx_apellido";
+            tx_apellido.Size = new Size(207, 23);
+            tx_apellido.TabIndex = 7;
             // 
-            // textBox3
+            // tx_cedula
             // 
-            textBox3.Anchor = AnchorStyles.Right;
-            textBox3.BackColor = Color.FromArgb(237, 232, 214);
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(235, 128);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(207, 23);
-            textBox3.TabIndex = 8;
+            tx_cedula.Anchor = AnchorStyles.Right;
+            tx_cedula.BackColor = Color.LightGoldenrodYellow;
+            tx_cedula.BorderStyle = BorderStyle.FixedSingle;
+            tx_cedula.Location = new Point(235, 128);
+            tx_cedula.Margin = new Padding(3, 2, 3, 2);
+            tx_cedula.Name = "tx_cedula";
+            tx_cedula.Size = new Size(207, 23);
+            tx_cedula.TabIndex = 8;
             // 
-            // textBox6
+            // tx_direccion
             // 
-            textBox6.Anchor = AnchorStyles.Right;
-            textBox6.BackColor = Color.FromArgb(237, 232, 214);
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(235, 298);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(207, 23);
-            textBox6.TabIndex = 11;
+            tx_direccion.Anchor = AnchorStyles.Right;
+            tx_direccion.BackColor = Color.LightGoldenrodYellow;
+            tx_direccion.BorderStyle = BorderStyle.FixedSingle;
+            tx_direccion.Location = new Point(235, 298);
+            tx_direccion.Margin = new Padding(3, 2, 3, 2);
+            tx_direccion.Name = "tx_direccion";
+            tx_direccion.Size = new Size(207, 23);
+            tx_direccion.TabIndex = 11;
             // 
-            // textBox5
+            // tx_edad
             // 
-            textBox5.Anchor = AnchorStyles.Right;
-            textBox5.BackColor = Color.FromArgb(237, 232, 214);
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(235, 184);
-            textBox5.Margin = new Padding(3, 2, 3, 2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(207, 23);
-            textBox5.TabIndex = 10;
+            tx_edad.Anchor = AnchorStyles.Right;
+            tx_edad.BackColor = Color.LightGoldenrodYellow;
+            tx_edad.BorderStyle = BorderStyle.FixedSingle;
+            tx_edad.Location = new Point(235, 184);
+            tx_edad.Margin = new Padding(3, 2, 3, 2);
+            tx_edad.Name = "tx_edad";
+            tx_edad.Size = new Size(207, 23);
+            tx_edad.TabIndex = 10;
             // 
-            // textBox4
+            // tx_telefono
             // 
-            textBox4.Anchor = AnchorStyles.Right;
-            textBox4.BackColor = Color.FromArgb(237, 232, 214);
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(235, 240);
-            textBox4.Margin = new Padding(3, 2, 3, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(207, 23);
-            textBox4.TabIndex = 9;
+            tx_telefono.Anchor = AnchorStyles.Right;
+            tx_telefono.BackColor = Color.LightGoldenrodYellow;
+            tx_telefono.BorderStyle = BorderStyle.FixedSingle;
+            tx_telefono.Location = new Point(235, 240);
+            tx_telefono.Margin = new Padding(3, 2, 3, 2);
+            tx_telefono.Name = "tx_telefono";
+            tx_telefono.Size = new Size(207, 23);
+            tx_telefono.TabIndex = 9;
             // 
             // tableLayoutPanel8
             // 
@@ -588,7 +589,7 @@
             // bt_registrar
             // 
             bt_registrar.Anchor = AnchorStyles.None;
-            bt_registrar.BackColor = Color.Yellow;
+            bt_registrar.BackColor = Color.FromArgb(255, 255, 128);
             bt_registrar.FlatAppearance.BorderSize = 2;
             bt_registrar.FlatStyle = FlatStyle.Flat;
             bt_registrar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -602,7 +603,7 @@
             // bt_limpiar
             // 
             bt_limpiar.Anchor = AnchorStyles.None;
-            bt_limpiar.BackColor = Color.Yellow;
+            bt_limpiar.BackColor = Color.FromArgb(255, 255, 128);
             bt_limpiar.FlatAppearance.BorderSize = 2;
             bt_limpiar.FlatStyle = FlatStyle.Flat;
             bt_limpiar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -612,6 +613,7 @@
             bt_limpiar.TabIndex = 18;
             bt_limpiar.Text = "LIMPIAR";
             bt_limpiar.UseVisualStyleBackColor = false;
+            bt_limpiar.Click += bt_limpiar_Click;
             // 
             // tableLayoutPanel9
             // 
@@ -631,7 +633,7 @@
             // bt_regresar
             // 
             bt_regresar.Anchor = AnchorStyles.Right;
-            bt_regresar.BackColor = Color.Yellow;
+            bt_regresar.BackColor = Color.FromArgb(255, 255, 128);
             bt_regresar.FlatAppearance.BorderSize = 2;
             bt_regresar.FlatStyle = FlatStyle.Flat;
             bt_regresar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -757,12 +759,12 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
+        private TextBox tx_nombre;
+        private TextBox tx_apellido;
+        private TextBox tx_cedula;
+        private TextBox tx_direccion;
+        private TextBox tx_edad;
+        private TextBox tx_telefono;
         private PictureBox pictureBox1;
         private PictureBox pictureBox4;
         private Label label8;
@@ -771,15 +773,15 @@
         private Label label12;
         private Label label13;
         private Label label14;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private DateTimePicker dateTimePicker1;
+        private TextBox tx_horario;
+        private TextBox tx_objetivo;
+        private TextBox tx_observaciones;
+        private DateTimePicker tx_fechain;
         private TableLayoutPanel tableLayoutPanel5;
         private Label label10;
-        private TextBox textBox7;
+        private TextBox tx_peso;
         private Label label9;
-        private TextBox textBox8;
+        private TextBox tx_talla;
         private Button bt_registrar;
         private Button bt_limpiar;
         private PictureBox pictureBox2;

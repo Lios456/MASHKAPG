@@ -55,5 +55,21 @@ namespace MASHKAPG
         {
 
         }
+
+        private void bt_limpiar_Click(object sender, EventArgs e)
+        {
+            this.tx_nombre.Text = "";
+            this.tx_apellido.Text = "";
+            this.tx_cedula.Text = "";
+            this.tx_direccion.Text = "";
+            this.tx_edad.Text = "";
+            this.tx_fechain.Value = DateTime.Now;
+            this.tx_horario.Text = "";
+            this.tx_objetivo.Text = "";
+            this.tx_observaciones.Text = "";
+            this.tx_peso.Text = "";
+            this.tx_talla.Text = "";
+            this.tx_telefono.Text = "";
+        }
     }
 }

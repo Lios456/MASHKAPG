@@ -19,7 +19,7 @@ namespace MASHKAPG.clases
         // ---------------------------------------------------------------------------------------------------------------
         public void CrearConexion()
         {
-            MessageBox.Show(File.ReadAllText("cadena.txt"));
+            //MessageBox.Show(File.ReadAllText("cadena.txt"));
             connection.Open();
 
             //connection.Close();
@@ -95,6 +95,23 @@ namespace MASHKAPG.clases
             }
             connection.Close();
             return list;
+        }
+        public List<Usuario> consultaUsuarios(string sql)
+        {
+            CrearConexion();
+            var usuarios = new List<Usuario>();
+            var command = new MySqlCommand(sql, connection);
+            var datos = command.ExecuteReader();
+            while (datos.Read())
+            {
+                var usu = new Usuario();
+                usu.id = datos.GetInt16(0);
+                usu.usuarioName = datos.GetString(1);
+                usu.usuarioPassword = datos.GetString(2);
+                usu.Tipo = datos.GetString(3);
+                usuarios.Add(usu);
+            }
+            return usuarios;
         }
 
 

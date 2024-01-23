@@ -218,6 +218,7 @@
             bt_regresar.TabIndex = 1;
             bt_regresar.Text = "REGRESAR";
             bt_regresar.UseVisualStyleBackColor = false;
+            bt_regresar.Click += bt_regresar_Click;
             // 
             // tableLayoutPanel5
             // 
@@ -254,6 +255,7 @@
             bt_nuevocliente.TabIndex = 2;
             bt_nuevocliente.Text = "NUEVO CLIENTE";
             bt_nuevocliente.UseVisualStyleBackColor = false;
+            bt_nuevocliente.Click += bt_nuevocliente_Click;
             // 
             // pictureBox1
             // 
@@ -279,6 +281,7 @@
             bt_administrarclientes.TabIndex = 3;
             bt_administrarclientes.Text = "ADMINISTRAR CLIENTES";
             bt_administrarclientes.UseVisualStyleBackColor = false;
+            bt_administrarclientes.Click += bt_administrarclientes_Click;
             // 
             // pictureBox2
             // 
@@ -314,6 +317,7 @@
             bt_nuevousuario.TabIndex = 6;
             bt_nuevousuario.Text = "NUEVO USUARIO";
             bt_nuevousuario.UseVisualStyleBackColor = true;
+            bt_nuevousuario.Click += bt_nuevousuario_Click;
             // 
             // VistaAdmin
             // 
