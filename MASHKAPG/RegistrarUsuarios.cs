@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MASHKAPG.clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,10 @@ namespace MASHKAPG
 {
     public partial class RegistrarUsuarios : Form
     {
-        public RegistrarUsuarios()
-        {
+        private Usuario usuarioact;
+        public RegistrarUsuarios(Usuario u)
+        { 
+            this.usuarioact = u;
             InitializeComponent();
         }
 
@@ -63,8 +66,8 @@ namespace MASHKAPG
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new VistaAdmin().Show();
+            this.Close();
+            new VistaAdmin(usuarioact).Show();
         }
 
         private void bt_limpiar_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MASHKAPG.clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,10 @@ namespace MASHKAPG
 {
     public partial class VistaAdmin : Form
     {
-        public VistaAdmin()
+        private Usuario usuarioact;
+        public VistaAdmin(Usuario u)
         {
+            this.usuarioact = u;
             InitializeComponent();
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -58,27 +61,27 @@ namespace MASHKAPG
 
         private void bt_regresar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             new Login().Show();
 
         }
 
         private void bt_nuevocliente_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new RegistrarClientes().Show();
+            this.Close();
+            new RegistrarClientes(usuarioact).Show();
         }
 
         private void bt_administrarclientes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new VerClientes().Show();
+            new VerClientes(usuarioact).Show();
         }
 
         private void bt_nuevousuario_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new RegistrarUsuarios().Show();
+            new RegistrarUsuarios(usuarioact).Show();
         }
     }
 }

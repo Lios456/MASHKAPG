@@ -17,37 +17,17 @@ namespace MASHKAPG.clases
         public string? Email { get; set; }
         public int Age { get; set; }
         public decimal Weight { get; set; }
-        public string? City { get; set; }
-        public string? Barrio { get; set; }
-        public string? Calles { get; set; }
-        public string? Sex { get; set; }
+        public string? Direction { get; set; }
+        public string? DNI { get; set; }
+        public string? Horario { get; set; }
+        public string? Size { get; set; }
         public DateTime Ingreso { get; set; }
         public DateTime Salida { get; set; }
         public string? Observaciones { get; set; }
+        public string? Objetives { get; set; }
+        public int? Restant { get; set; }
 
-        public void ingresarcliente(Cliente c)
-        {
-            string sql = $"insert into cliente" +
-                $"(Nombre, Apellido, Telefono, Email,Edad,Peso," +
-                $"Ciudad,Barrio,Calles,Sexo,Ingreso,Salida,Observaciones)" +
-                $"values" +
-                $"('{c.Name}'," +
-                $"'{c.LastName}'," +
-                $"'{c.Phone}'," +
-                $"'{c.Email}'," +
-                $"'{c.Age}'," +
-                $"'{Math.Truncate(c.Weight)}.{Math.Round(c.Weight, 0)}'," +
-                $"'{c.City}'," +
-                $"'{c.Barrio}'," +
-                $"'{c.Calles}'," +
-                $"'{c.Sex}'," +
-                $"'{c.Ingreso.Year}-{c.Ingreso.Month}-{c.Ingreso.Day}'," +
-                $"'{c.Salida.Year}-{c.Salida.Month}-{c.Salida.Day}'," +
-                $"'{c.Observaciones}'" +
-                $")";
-            new ConexionMysql().insertar(sql);
-
-        }
+       
 
         public void eliminarcli(Cliente c)
         {

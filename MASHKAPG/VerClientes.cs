@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MASHKAPG.clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,14 @@ namespace MASHKAPG
 {
     public partial class VerClientes : Form
     {
-        public VerClientes()
+        private Usuario usuarioact;
+        public VerClientes(Usuario u)
         {
+            this.usuarioact = u;
             InitializeComponent();
             filtro.SelectedIndex = 0;
+            new ConexionMysql().NoQuery("call actualizarrestante()");
+            this.clientes_view.DataSource = new ConexionMysql().consultarClientes("select * from clientes");
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -54,8 +59,16 @@ namespace MASHKAPG
 
         private void bt_regresar_Click(object sender, EventArgs e)
         {
-            new VistaAdmin().Show();
-            this.Close();
+            if(usuarioact.Tipo == "admin")
+            {
+                this.Hide();
+                new VistaAdmin(usuarioact).Show();
+            }
+            else
+            {
+                this.Hide();
+                new Vistausu(usuarioact).Show();
+            }
         }
 
         private void filtro_SelectedIndexChanged(object sender, EventArgs e)

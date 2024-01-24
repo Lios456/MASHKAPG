@@ -41,21 +41,21 @@ namespace MASHKAPG
             {
                 usuarioact.Tipo = new ConexionMysql().consultaUsuarios($"select * from usuario where Nombre = '{usuario.Text}'")[0].Tipo;
                 usuarioact.usuarioName = new ConexionMysql().consultaUsuarios($"select * from usuario where Nombre = '{usuario.Text}'")[0].usuarioName;
-                MessageBox.Show("Bienvenido:  "+usuarioact.usuarioPassword+ "  " + usuarioact.Tipo);
+                MessageBox.Show("Bienvenido:  " + usuarioact.usuarioPassword + "  " + usuarioact.Tipo);
                 // Si el tipo de usuario es "admin" se abre la vista de administradores, sino, se abre la vista de usuarios
-                
-                if(usuarioact.Tipo == "admin")
+
+                if (usuarioact.Tipo == "admin")
                 {
-                    new VistaAdmin().Show();
-                    
+                    new VistaAdmin(usuarioact).Show();
+
                 }
                 else
                 {
-                    new Vistausu().Show();
-                    
+                    new Vistausu(usuarioact).Show();
+
                 }
                 this.Hide();
-           
+
             }
             else
             {

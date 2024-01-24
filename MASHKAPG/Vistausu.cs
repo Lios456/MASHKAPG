@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MASHKAPG.clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,10 @@ namespace MASHKAPG
 {
     public partial class Vistausu : Form
     {
-        public Vistausu()
+        private Usuario usuarioact;
+        public Vistausu(Usuario u)
         {
+            this.usuarioact = u;
             InitializeComponent();
         }
 
@@ -60,13 +63,13 @@ namespace MASHKAPG
         private void bt_nuevocliente_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new RegistrarClientes().Show();
+            new RegistrarClientes(new clases.Usuario()).Show();
         }
 
         private void bt_administrarclientes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new VerClientes().Show();
+            new VerClientes(new Usuario()).Show();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             button1 = new Button();
@@ -52,12 +53,8 @@
             tableLayoutPanel9 = new TableLayoutPanel();
             filtro = new ComboBox();
             clientes_view = new DataGridView();
+            clienteBindingSource = new BindingSource(components);
             Eleccion = new DataGridViewCheckBoxColumn();
-            Nombre = new DataGridViewTextBoxColumn();
-            Apellido = new DataGridViewTextBoxColumn();
-            telefono = new DataGridViewTextBoxColumn();
-            cedula = new DataGridViewTextBoxColumn();
-            fecha = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -72,6 +69,7 @@
             tableLayoutPanel8.SuspendLayout();
             tableLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)clientes_view).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)clienteBindingSource).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -405,7 +403,7 @@
             // 
             clientes_view.BackgroundColor = Color.White;
             clientes_view.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            clientes_view.Columns.AddRange(new DataGridViewColumn[] { Eleccion, Nombre, Apellido, telefono, cedula, fecha });
+            clientes_view.Columns.AddRange(new DataGridViewColumn[] { Eleccion });
             clientes_view.Dock = DockStyle.Fill;
             clientes_view.Location = new Point(3, 55);
             clientes_view.Name = "clientes_view";
@@ -413,39 +411,14 @@
             clientes_view.Size = new Size(782, 202);
             clientes_view.TabIndex = 1;
             // 
+            // clienteBindingSource
+            // 
+            clienteBindingSource.DataSource = typeof(clases.Cliente);
+            // 
             // Eleccion
             // 
-            Eleccion.HeaderText = "N";
+            Eleccion.HeaderText = "";
             Eleccion.Name = "Eleccion";
-            // 
-            // Nombre
-            // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.Name = "Nombre";
-            Nombre.Resizable = DataGridViewTriState.True;
-            Nombre.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Apellido
-            // 
-            Apellido.HeaderText = "Apellido";
-            Apellido.Name = "Apellido";
-            Apellido.Resizable = DataGridViewTriState.True;
-            Apellido.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // telefono
-            // 
-            telefono.HeaderText = "N. Teléfono";
-            telefono.Name = "telefono";
-            // 
-            // cedula
-            // 
-            cedula.HeaderText = "Cédula";
-            cedula.Name = "cedula";
-            // 
-            // fecha
-            // 
-            fecha.HeaderText = "Fecha";
-            fecha.Name = "fecha";
             // 
             // VerClientes
             // 
@@ -473,6 +446,7 @@
             tableLayoutPanel8.ResumeLayout(false);
             tableLayoutPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)clientes_view).EndInit();
+            ((System.ComponentModel.ISupportInitialize)clienteBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -502,11 +476,7 @@
         private TableLayoutPanel tableLayoutPanel9;
         private ComboBox filtro;
         private DataGridView clientes_view;
+        private BindingSource clienteBindingSource;
         private DataGridViewCheckBoxColumn Eleccion;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Apellido;
-        private DataGridViewTextBoxColumn telefono;
-        private DataGridViewTextBoxColumn cedula;
-        private DataGridViewTextBoxColumn fecha;
     }
 }

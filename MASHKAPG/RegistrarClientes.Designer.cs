@@ -643,6 +643,7 @@
             bt_regresar.TabIndex = 20;
             bt_regresar.Text = "REGRESAR";
             bt_regresar.UseVisualStyleBackColor = false;
+            bt_regresar.Click += bt_regresar_Click;
             // 
             // pictureBox2
             // 

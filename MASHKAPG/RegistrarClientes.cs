@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MASHKAPG.clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,10 @@ namespace MASHKAPG
 {
     public partial class RegistrarClientes : Form
     {
-        public RegistrarClientes()
+        private Usuario usuarioact;
+        public RegistrarClientes(Usuario u)
         {
+            this.usuarioact = u;
             InitializeComponent();
         }
 
@@ -70,6 +73,20 @@ namespace MASHKAPG
             this.tx_peso.Text = "";
             this.tx_talla.Text = "";
             this.tx_telefono.Text = "";
+        }
+
+        private void bt_regresar_Click(object sender, EventArgs e)
+        {
+            if (usuarioact.Tipo == "admin")
+            {
+                this.Hide();
+                new VistaAdmin(usuarioact).Show();
+            }
+            else
+            {
+                this.Hide();
+                new Vistausu(usuarioact).Show();
+            }
         }
     }
 }
