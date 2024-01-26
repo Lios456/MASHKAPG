@@ -15,6 +15,14 @@ namespace MASHKAPG.clases
         public string? usuarioPassword { get; set; }
 
         public string? Tipo { get; set; }
+
+        public Usuario() { }
+        public Usuario(string name, string password, string tipo) 
+        {
+            this.usuarioName = name;
+            this.usuarioPassword = password;
+            this.Tipo = tipo;
+        }
         public static string GetMD5(string str)
         {
             using (MD5 md5 = MD5.Create())
@@ -30,7 +38,11 @@ namespace MASHKAPG.clases
             }
         }
 
-    
+        public static void registrarUsuario(Usuario u)
+        {
+            string sql = $"insert into usuario(Nombre, Password, Tipo) values ('{u.usuarioName}', '{Usuario.GetMD5(u.usuarioPassword)}', '{u.Tipo}')";
+            new ConexionMysql().insertar(sql);
+        }
 
 
 

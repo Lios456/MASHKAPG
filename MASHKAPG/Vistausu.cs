@@ -63,13 +63,13 @@ namespace MASHKAPG
         private void bt_nuevocliente_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new RegistrarClientes(new clases.Usuario()).Show();
+            new RegistrarClientes(usuarioact).Show();
         }
 
         private void bt_administrarclientes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new VerClientes(new Usuario()).Show();
+            new VerClientes(usuarioact).Show();
         }
     }
 }

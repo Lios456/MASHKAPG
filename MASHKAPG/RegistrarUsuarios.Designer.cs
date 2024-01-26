@@ -159,7 +159,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(tableLayoutPanel4);
             panel1.Controls.Add(tableLayoutPanel3);
             panel1.Dock = DockStyle.Fill;
@@ -247,7 +247,7 @@
             // usuario
             // 
             usuario.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            usuario.BackColor = Color.FromArgb(237, 232, 214);
+            usuario.BackColor = Color.White;
             usuario.BorderStyle = BorderStyle.FixedSingle;
             usuario.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             usuario.Location = new Point(359, 99);
@@ -274,7 +274,7 @@
             // password1
             // 
             password1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            password1.BackColor = Color.FromArgb(237, 232, 214);
+            password1.BackColor = Color.White;
             password1.BorderStyle = BorderStyle.FixedSingle;
             password1.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             password1.Location = new Point(359, 152);
@@ -302,7 +302,7 @@
             // password2
             // 
             password2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            password2.BackColor = Color.FromArgb(237, 232, 214);
+            password2.BackColor = Color.White;
             password2.BorderStyle = BorderStyle.FixedSingle;
             password2.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             password2.Location = new Point(359, 205);
@@ -327,8 +327,10 @@
             // bt_registrar
             // 
             bt_registrar.Anchor = AnchorStyles.None;
-            bt_registrar.BackColor = Color.Yellow;
-            bt_registrar.FlatAppearance.BorderSize = 2;
+            bt_registrar.BackColor = Color.Transparent;
+            bt_registrar.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_registrar.BackgroundImageLayout = ImageLayout.Stretch;
+            bt_registrar.FlatAppearance.BorderSize = 0;
             bt_registrar.FlatStyle = FlatStyle.Flat;
             bt_registrar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bt_registrar.Location = new Point(38, 296);
@@ -337,12 +339,15 @@
             bt_registrar.TabIndex = 16;
             bt_registrar.Text = "REGISTRAR";
             bt_registrar.UseVisualStyleBackColor = false;
+            bt_registrar.Click += bt_registrar_Click;
             // 
             // bt_limpiar
             // 
             bt_limpiar.Anchor = AnchorStyles.None;
-            bt_limpiar.BackColor = Color.Yellow;
-            bt_limpiar.FlatAppearance.BorderSize = 2;
+            bt_limpiar.BackColor = Color.Transparent;
+            bt_limpiar.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_limpiar.BackgroundImageLayout = ImageLayout.Stretch;
+            bt_limpiar.FlatAppearance.BorderSize = 0;
             bt_limpiar.FlatStyle = FlatStyle.Flat;
             bt_limpiar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bt_limpiar.Location = new Point(222, 296);
@@ -356,8 +361,10 @@
             // button5
             // 
             button5.Anchor = AnchorStyles.Right;
-            button5.BackColor = Color.Yellow;
-            button5.FlatAppearance.BorderSize = 2;
+            button5.BackColor = Color.Transparent;
+            button5.BackgroundImage = Properties.Resources.boton_fondo;
+            button5.BackgroundImageLayout = ImageLayout.Stretch;
+            button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button5.Location = new Point(599, 296);

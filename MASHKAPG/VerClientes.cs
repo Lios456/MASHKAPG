@@ -59,7 +59,7 @@ namespace MASHKAPG
 
         private void bt_regresar_Click(object sender, EventArgs e)
         {
-            if(usuarioact.Tipo == "admin")
+            if (usuarioact.Tipo == "admin")
             {
                 this.Hide();
                 new VistaAdmin(usuarioact).Show();
@@ -73,29 +73,52 @@ namespace MASHKAPG
 
         private void filtro_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TextBox texto = new TextBox();
+
             if (filtro.SelectedItem.ToString() == "Nombre" || filtro.SelectedItem.ToString() == "Apellido")
             {
                 tableLayoutPanel9.Controls.Remove(tableLayoutPanel9.GetControlFromPosition(0, 0));
                 tableLayoutPanel9.Controls.Add(texto, 0, 0);
-                texto.Size = new Size(100, 10);
-                texto.Dock = DockStyle.Fill;
-                texto.Name = "texto";
-                texto.BorderStyle = BorderStyle.FixedSingle;
-                texto.BackColor = Color.White;
                 if (filtro.SelectedItem.ToString() == "Nombre")
                 {
                     texto.Text = "Nombre";
                 }
-                else
+                else if (filtro.SelectedItem.ToString() == "Apellido")
                 {
                     texto.Text = "Apellido";
                 }
+
             }
-            else
+            else if (filtro.SelectedItem.ToString() != "Nombre" || filtro.SelectedItem.ToString() != "Apellido")
             {
                 tableLayoutPanel9.Controls.Remove(tableLayoutPanel9.GetControlFromPosition(0, 0));
+                if (filtro.SelectedItem.ToString() == "Por Pagar")
+                {
+                    this.clientes_view.DataSource = new ConexionMysql().consultarClientes($"select * from clientes where restante <= 0 order by restante asc");
+                }
+                else if (filtro.SelectedItem.ToString() == "Pagados")
+                {
+                    this.clientes_view.DataSource = new ConexionMysql().consultarClientes($"select * from clientes where restante > 0");
+                }
+                else if (filtro.SelectedItem.ToString() == "Todos")
+                {
+                    this.clientes_view.DataSource = new ConexionMysql().consultarClientes($"select * from clientes");
+                }
             }
+
+
+        }
+
+        private void texto_TextChanged(object sender, EventArgs e)
+        {
+            if (filtro.SelectedItem.ToString() == "Nombre")
+            {
+                this.clientes_view.DataSource = new ConexionMysql().consultarClientes($"select * from clientes where nombre like '%{this.texto.Text}%'");
+            }
+            else if (filtro.SelectedItem.ToString() == "Apellido")
+            {
+                this.clientes_view.DataSource = new ConexionMysql().consultarClientes($"select * from clientes where apellido like '%{this.texto.Text}%'");
+            }
+
         }
     }
 }

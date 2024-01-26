@@ -208,8 +208,10 @@
             // bt_regresar
             // 
             bt_regresar.Anchor = AnchorStyles.Right;
-            bt_regresar.BackColor = Color.Yellow;
-            bt_regresar.FlatAppearance.BorderSize = 2;
+            bt_regresar.BackColor = Color.Transparent;
+            bt_regresar.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_regresar.BackgroundImageLayout = ImageLayout.Stretch;
+            bt_regresar.FlatAppearance.BorderSize = 0;
             bt_regresar.FlatStyle = FlatStyle.Flat;
             bt_regresar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bt_regresar.Location = new Point(15, 11);

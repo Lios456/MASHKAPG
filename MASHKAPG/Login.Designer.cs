@@ -246,12 +246,13 @@
             // label3
             // 
             label3.Anchor = AnchorStyles.None;
-            label3.BackColor = Color.Black;
+            label3.BackColor = Color.Transparent;
+            label3.FlatStyle = FlatStyle.Flat;
             label3.Font = new Font("Comic Sans MS", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(47, 77);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(38, 77);
             label3.Name = "label3";
-            label3.Size = new Size(114, 32);
+            label3.Size = new Size(131, 32);
             label3.TabIndex = 0;
             label3.Text = "Contraseña:";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -300,9 +301,10 @@
             // label2
             // 
             label2.Anchor = AnchorStyles.None;
-            label2.BackColor = Color.Black;
+            label2.BackColor = Color.Transparent;
+            label2.FlatStyle = FlatStyle.Flat;
             label2.Font = new Font("Comic Sans MS", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(46, 77);
             label2.Name = "label2";
             label2.Size = new Size(114, 32);
@@ -363,7 +365,9 @@
             // bt_login
             // 
             bt_login.Anchor = AnchorStyles.None;
-            bt_login.BackColor = Color.Black;
+            bt_login.BackColor = Color.Transparent;
+            bt_login.BackgroundImage = Properties.Resources.fondo_redondeado_negro;
+            bt_login.BackgroundImageLayout = ImageLayout.Stretch;
             bt_login.FlatAppearance.BorderSize = 0;
             bt_login.FlatStyle = FlatStyle.Flat;
             bt_login.Font = new Font("Comic Sans MS", 15F, FontStyle.Regular, GraphicsUnit.Point);

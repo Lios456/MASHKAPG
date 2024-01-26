@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             button1 = new Button();
@@ -52,9 +53,11 @@
             tableLayoutPanel8 = new TableLayoutPanel();
             tableLayoutPanel9 = new TableLayoutPanel();
             filtro = new ComboBox();
+            texto = new TextBox();
+            label3 = new Label();
             clientes_view = new DataGridView();
-            clienteBindingSource = new BindingSource(components);
             Eleccion = new DataGridViewCheckBoxColumn();
+            clienteBindingSource = new BindingSource(components);
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -277,10 +280,12 @@
             // 
             // bt_actualizar
             // 
-            bt_actualizar.Dock = DockStyle.Fill;
-            bt_actualizar.FlatAppearance.BorderSize = 2;
+            bt_actualizar.Anchor = AnchorStyles.None;
+            bt_actualizar.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_actualizar.BackgroundImageLayout = ImageLayout.Stretch;
+            bt_actualizar.FlatAppearance.BorderSize = 0;
             bt_actualizar.FlatStyle = FlatStyle.Flat;
-            bt_actualizar.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            bt_actualizar.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             bt_actualizar.Location = new Point(3, 3);
             bt_actualizar.Name = "bt_actualizar";
             bt_actualizar.Size = new Size(123, 44);
@@ -290,10 +295,12 @@
             // 
             // bt_autorenov
             // 
-            bt_autorenov.Dock = DockStyle.Fill;
-            bt_autorenov.FlatAppearance.BorderSize = 2;
+            bt_autorenov.Anchor = AnchorStyles.None;
+            bt_autorenov.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_autorenov.BackgroundImageLayout = ImageLayout.Stretch;
+            bt_autorenov.FlatAppearance.BorderSize = 0;
             bt_autorenov.FlatStyle = FlatStyle.Flat;
-            bt_autorenov.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            bt_autorenov.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             bt_autorenov.Location = new Point(132, 3);
             bt_autorenov.Name = "bt_autorenov";
             bt_autorenov.Size = new Size(123, 44);
@@ -303,10 +310,12 @@
             // 
             // bt_borrar
             // 
-            bt_borrar.Dock = DockStyle.Fill;
-            bt_borrar.FlatAppearance.BorderSize = 2;
+            bt_borrar.Anchor = AnchorStyles.None;
+            bt_borrar.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_borrar.BackgroundImageLayout = ImageLayout.Stretch;
+            bt_borrar.FlatAppearance.BorderSize = 0;
             bt_borrar.FlatStyle = FlatStyle.Flat;
-            bt_borrar.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            bt_borrar.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             bt_borrar.Location = new Point(261, 3);
             bt_borrar.Name = "bt_borrar";
             bt_borrar.Size = new Size(124, 44);
@@ -342,8 +351,10 @@
             // 
             // bt_regresar
             // 
+            bt_regresar.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_regresar.BackgroundImageLayout = ImageLayout.Stretch;
             bt_regresar.Dock = DockStyle.Fill;
-            bt_regresar.FlatAppearance.BorderSize = 2;
+            bt_regresar.FlatAppearance.BorderSize = 0;
             bt_regresar.FlatStyle = FlatStyle.Flat;
             bt_regresar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bt_regresar.Location = new Point(3, 3);
@@ -376,6 +387,8 @@
             tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.8337593F));
             tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel9.Controls.Add(filtro, 2, 0);
+            tableLayoutPanel9.Controls.Add(texto, 0, 0);
+            tableLayoutPanel9.Controls.Add(label3, 1, 0);
             tableLayoutPanel9.Dock = DockStyle.Fill;
             tableLayoutPanel9.Location = new Point(3, 3);
             tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -386,39 +399,76 @@
             // 
             // filtro
             // 
-            filtro.Anchor = AnchorStyles.None;
+            filtro.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             filtro.BackColor = Color.Black;
             filtro.DropDownStyle = ComboBoxStyle.DropDownList;
             filtro.FlatStyle = FlatStyle.Flat;
+            filtro.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             filtro.ForeColor = Color.White;
             filtro.FormattingEnabled = true;
-            filtro.Items.AddRange(new object[] { "Ninguno", "Nombre", "Apellido", "Por Pagar", "Pagados" });
-            filtro.Location = new Point(628, 11);
+            filtro.Items.AddRange(new object[] { "Todos", "Nombre", "Apellido", "Por Pagar", "Pagados" });
+            filtro.Location = new Point(628, 7);
             filtro.Name = "filtro";
-            filtro.Size = new Size(151, 23);
+            filtro.Size = new Size(151, 31);
             filtro.TabIndex = 1;
             filtro.SelectedIndexChanged += filtro_SelectedIndexChanged;
             // 
+            // texto
+            // 
+            texto.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            texto.BorderStyle = BorderStyle.FixedSingle;
+            texto.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            texto.Location = new Point(3, 8);
+            texto.Name = "texto";
+            texto.Size = new Size(503, 30);
+            texto.TabIndex = 2;
+            texto.TextChanged += texto_TextChanged;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(512, 11);
+            label3.Name = "label3";
+            label3.Size = new Size(110, 23);
+            label3.TabIndex = 3;
+            label3.Text = "Filtrar por:";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // clientes_view
             // 
+            clientes_view.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             clientes_view.BackgroundColor = Color.White;
+            clientes_view.BorderStyle = BorderStyle.None;
+            clientes_view.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             clientes_view.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             clientes_view.Columns.AddRange(new DataGridViewColumn[] { Eleccion });
-            clientes_view.Dock = DockStyle.Fill;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Cambria", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(255, 255, 128);
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            clientes_view.DefaultCellStyle = dataGridViewCellStyle1;
+            clientes_view.GridColor = Color.Black;
             clientes_view.Location = new Point(3, 55);
             clientes_view.Name = "clientes_view";
+            clientes_view.RowHeadersVisible = false;
             clientes_view.RowTemplate.Height = 25;
+            clientes_view.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             clientes_view.Size = new Size(782, 202);
             clientes_view.TabIndex = 1;
-            // 
-            // clienteBindingSource
-            // 
-            clienteBindingSource.DataSource = typeof(clases.Cliente);
             // 
             // Eleccion
             // 
             Eleccion.HeaderText = "";
             Eleccion.Name = "Eleccion";
+            // 
+            // clienteBindingSource
+            // 
+            clienteBindingSource.DataSource = typeof(clases.Cliente);
             // 
             // VerClientes
             // 
@@ -445,6 +495,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             tableLayoutPanel8.ResumeLayout(false);
             tableLayoutPanel9.ResumeLayout(false);
+            tableLayoutPanel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)clientes_view).EndInit();
             ((System.ComponentModel.ISupportInitialize)clienteBindingSource).EndInit();
             ResumeLayout(false);
@@ -478,5 +529,7 @@
         private DataGridView clientes_view;
         private BindingSource clienteBindingSource;
         private DataGridViewCheckBoxColumn Eleccion;
+        private TextBox texto;
+        private Label label3;
     }
 }

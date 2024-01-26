@@ -31,8 +31,28 @@ namespace MASHKAPG.clases
 
         public void eliminarcli(Cliente c)
         {
-            string sql = $"Delete from cliente where id = '{c.Id}'";
+            string sql = $"Delete from clientes where id = '{c.Id}'";
             new ConexionMysql().Delete(sql);
+        }
+
+        public static void agregarcli(Cliente c)
+        {
+            string sql = $"Insert into clientes(nombre, apellido, cedula, edad, telefono, direccion, peso , talla, horario, objetivo, observaciones, fechain, salida) values(" +
+                $"'{c.Name}'," +
+                $"'{c.LastName}'," +
+                $"'{c.DNI}'," +
+                $"'{c.Age}'," +
+                $"'{c.Phone}'," +
+                $"'{c.Direction}'," +
+                $"'{c.Weight}'," +
+                $"'{c.Size}'," +
+                $"'{c.Horario}'," +
+                $"'{c.Objetives}'," +
+                $"'{c.Observaciones}'," +
+                $"'{c.Ingreso.Year}-{c.Ingreso.Month}-{c.Ingreso.Day}'," +
+                $"'{c.Salida.Year}-{c.Salida.Month}-{c.Salida.Day}'" +
+                $")";
+            new ConexionMysql().insertar(sql);
         }
 
     }

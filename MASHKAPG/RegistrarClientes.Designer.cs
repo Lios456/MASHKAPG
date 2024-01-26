@@ -183,7 +183,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(210, 210, 212);
+            panel1.BackColor = Color.White;
             panel1.BackgroundImage = Properties.Resources.logo_MASHKAPG_opaco;
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
             panel1.Controls.Add(tableLayoutPanel7);
@@ -251,12 +251,13 @@
             // tx_peso
             // 
             tx_peso.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            tx_peso.BackColor = Color.LightGoldenrodYellow;
+            tx_peso.BackColor = Color.White;
             tx_peso.BorderStyle = BorderStyle.FixedSingle;
-            tx_peso.Location = new Point(125, 11);
+            tx_peso.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_peso.Location = new Point(125, 7);
             tx_peso.Margin = new Padding(3, 2, 3, 2);
             tx_peso.Name = "tx_peso";
-            tx_peso.Size = new Size(125, 23);
+            tx_peso.Size = new Size(125, 30);
             tx_peso.TabIndex = 7;
             // 
             // label9
@@ -274,12 +275,13 @@
             // tx_talla
             // 
             tx_talla.Anchor = AnchorStyles.Left;
-            tx_talla.BackColor = Color.LightGoldenrodYellow;
+            tx_talla.BackColor = Color.White;
             tx_talla.BorderStyle = BorderStyle.FixedSingle;
-            tx_talla.Location = new Point(313, 11);
+            tx_talla.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_talla.Location = new Point(313, 7);
             tx_talla.Margin = new Padding(3, 2, 3, 2);
             tx_talla.Name = "tx_talla";
-            tx_talla.Size = new Size(79, 23);
+            tx_talla.Size = new Size(79, 30);
             tx_talla.TabIndex = 8;
             // 
             // tableLayoutPanel6
@@ -353,36 +355,39 @@
             label14.Name = "label14";
             label14.Size = new Size(74, 46);
             label14.TabIndex = 3;
-            label14.Text = "Fecha de Ingreso:";
+            label14.Text = "Fecha de Salida:";
             label14.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tx_horario
             // 
             tx_horario.Anchor = AnchorStyles.Left;
-            tx_horario.BackColor = Color.LightGoldenrodYellow;
+            tx_horario.BackColor = Color.White;
             tx_horario.BorderStyle = BorderStyle.FixedSingle;
-            tx_horario.Location = new Point(114, 30);
+            tx_horario.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_horario.Location = new Point(114, 27);
             tx_horario.Margin = new Padding(3, 2, 3, 2);
             tx_horario.Name = "tx_horario";
-            tx_horario.Size = new Size(267, 23);
+            tx_horario.Size = new Size(267, 30);
             tx_horario.TabIndex = 6;
             // 
             // tx_objetivo
             // 
             tx_objetivo.Anchor = AnchorStyles.Left;
-            tx_objetivo.BackColor = Color.LightGoldenrodYellow;
+            tx_objetivo.BackColor = Color.White;
             tx_objetivo.BorderStyle = BorderStyle.FixedSingle;
-            tx_objetivo.Location = new Point(114, 114);
+            tx_objetivo.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_objetivo.Location = new Point(114, 111);
             tx_objetivo.Margin = new Padding(3, 2, 3, 2);
             tx_objetivo.Name = "tx_objetivo";
-            tx_objetivo.Size = new Size(267, 23);
+            tx_objetivo.Size = new Size(267, 30);
             tx_objetivo.TabIndex = 7;
             // 
             // tx_observaciones
             // 
             tx_observaciones.Anchor = AnchorStyles.Left;
-            tx_observaciones.BackColor = Color.LightGoldenrodYellow;
+            tx_observaciones.BackColor = Color.White;
             tx_observaciones.BorderStyle = BorderStyle.FixedSingle;
+            tx_observaciones.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tx_observaciones.Location = new Point(114, 170);
             tx_observaciones.Margin = new Padding(3, 2, 3, 2);
             tx_observaciones.Multiline = true;
@@ -396,9 +401,11 @@
             tx_fechain.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tx_fechain.Location = new Point(114, 280);
             tx_fechain.Margin = new Padding(3, 2, 3, 2);
+            tx_fechain.MinDate = new DateTime(2024, 1, 24, 10, 7, 7, 0);
             tx_fechain.Name = "tx_fechain";
             tx_fechain.Size = new Size(267, 30);
             tx_fechain.TabIndex = 9;
+            tx_fechain.Value = new DateTime(2024, 1, 24, 10, 7, 7, 0);
             // 
             // tableLayoutPanel3
             // 
@@ -508,67 +515,73 @@
             // tx_nombre
             // 
             tx_nombre.Anchor = AnchorStyles.Right;
-            tx_nombre.BackColor = Color.LightGoldenrodYellow;
+            tx_nombre.BackColor = Color.White;
             tx_nombre.BorderStyle = BorderStyle.FixedSingle;
-            tx_nombre.Location = new Point(235, 16);
+            tx_nombre.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_nombre.Location = new Point(235, 13);
             tx_nombre.Margin = new Padding(3, 2, 3, 2);
             tx_nombre.Name = "tx_nombre";
-            tx_nombre.Size = new Size(207, 23);
+            tx_nombre.Size = new Size(207, 30);
             tx_nombre.TabIndex = 6;
             // 
             // tx_apellido
             // 
             tx_apellido.Anchor = AnchorStyles.Right;
-            tx_apellido.BackColor = Color.LightGoldenrodYellow;
+            tx_apellido.BackColor = Color.White;
             tx_apellido.BorderStyle = BorderStyle.FixedSingle;
-            tx_apellido.Location = new Point(235, 72);
+            tx_apellido.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_apellido.Location = new Point(235, 69);
             tx_apellido.Margin = new Padding(3, 2, 3, 2);
             tx_apellido.Name = "tx_apellido";
-            tx_apellido.Size = new Size(207, 23);
+            tx_apellido.Size = new Size(207, 30);
             tx_apellido.TabIndex = 7;
             // 
             // tx_cedula
             // 
             tx_cedula.Anchor = AnchorStyles.Right;
-            tx_cedula.BackColor = Color.LightGoldenrodYellow;
+            tx_cedula.BackColor = Color.White;
             tx_cedula.BorderStyle = BorderStyle.FixedSingle;
-            tx_cedula.Location = new Point(235, 128);
+            tx_cedula.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_cedula.Location = new Point(235, 125);
             tx_cedula.Margin = new Padding(3, 2, 3, 2);
             tx_cedula.Name = "tx_cedula";
-            tx_cedula.Size = new Size(207, 23);
+            tx_cedula.Size = new Size(207, 30);
             tx_cedula.TabIndex = 8;
             // 
             // tx_direccion
             // 
             tx_direccion.Anchor = AnchorStyles.Right;
-            tx_direccion.BackColor = Color.LightGoldenrodYellow;
+            tx_direccion.BackColor = Color.White;
             tx_direccion.BorderStyle = BorderStyle.FixedSingle;
-            tx_direccion.Location = new Point(235, 298);
+            tx_direccion.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_direccion.Location = new Point(235, 294);
             tx_direccion.Margin = new Padding(3, 2, 3, 2);
             tx_direccion.Name = "tx_direccion";
-            tx_direccion.Size = new Size(207, 23);
+            tx_direccion.Size = new Size(207, 30);
             tx_direccion.TabIndex = 11;
             // 
             // tx_edad
             // 
             tx_edad.Anchor = AnchorStyles.Right;
-            tx_edad.BackColor = Color.LightGoldenrodYellow;
+            tx_edad.BackColor = Color.White;
             tx_edad.BorderStyle = BorderStyle.FixedSingle;
-            tx_edad.Location = new Point(235, 184);
+            tx_edad.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_edad.Location = new Point(235, 181);
             tx_edad.Margin = new Padding(3, 2, 3, 2);
             tx_edad.Name = "tx_edad";
-            tx_edad.Size = new Size(207, 23);
+            tx_edad.Size = new Size(207, 30);
             tx_edad.TabIndex = 10;
             // 
             // tx_telefono
             // 
             tx_telefono.Anchor = AnchorStyles.Right;
-            tx_telefono.BackColor = Color.LightGoldenrodYellow;
+            tx_telefono.BackColor = Color.White;
             tx_telefono.BorderStyle = BorderStyle.FixedSingle;
-            tx_telefono.Location = new Point(235, 240);
+            tx_telefono.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tx_telefono.Location = new Point(235, 237);
             tx_telefono.Margin = new Padding(3, 2, 3, 2);
             tx_telefono.Name = "tx_telefono";
-            tx_telefono.Size = new Size(207, 23);
+            tx_telefono.Size = new Size(207, 30);
             tx_telefono.TabIndex = 9;
             // 
             // tableLayoutPanel8
@@ -589,8 +602,10 @@
             // bt_registrar
             // 
             bt_registrar.Anchor = AnchorStyles.None;
-            bt_registrar.BackColor = Color.FromArgb(255, 255, 128);
-            bt_registrar.FlatAppearance.BorderSize = 2;
+            bt_registrar.BackColor = Color.Transparent;
+            bt_registrar.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_registrar.BackgroundImageLayout = ImageLayout.Stretch;
+            bt_registrar.FlatAppearance.BorderSize = 0;
             bt_registrar.FlatStyle = FlatStyle.Flat;
             bt_registrar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bt_registrar.Location = new Point(50, 24);
@@ -599,12 +614,15 @@
             bt_registrar.TabIndex = 17;
             bt_registrar.Text = "REGISTRAR";
             bt_registrar.UseVisualStyleBackColor = false;
+            bt_registrar.Click += bt_registrar_Click;
             // 
             // bt_limpiar
             // 
             bt_limpiar.Anchor = AnchorStyles.None;
-            bt_limpiar.BackColor = Color.FromArgb(255, 255, 128);
-            bt_limpiar.FlatAppearance.BorderSize = 2;
+            bt_limpiar.BackColor = Color.Transparent;
+            bt_limpiar.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_limpiar.BackgroundImageLayout = ImageLayout.Stretch;
+            bt_limpiar.FlatAppearance.BorderSize = 0;
             bt_limpiar.FlatStyle = FlatStyle.Flat;
             bt_limpiar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bt_limpiar.Location = new Point(279, 24);
@@ -633,8 +651,10 @@
             // bt_regresar
             // 
             bt_regresar.Anchor = AnchorStyles.Right;
-            bt_regresar.BackColor = Color.FromArgb(255, 255, 128);
-            bt_regresar.FlatAppearance.BorderSize = 2;
+            bt_regresar.BackColor = Color.Transparent;
+            bt_regresar.BackgroundImage = Properties.Resources.boton_fondo;
+            bt_regresar.BackgroundImageLayout = ImageLayout.Stretch;
+            bt_regresar.FlatAppearance.BorderSize = 0;
             bt_regresar.FlatStyle = FlatStyle.Flat;
             bt_regresar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bt_regresar.Location = new Point(232, 24);

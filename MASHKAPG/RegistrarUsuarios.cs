@@ -15,8 +15,9 @@ namespace MASHKAPG
     public partial class RegistrarUsuarios : Form
     {
         private Usuario usuarioact;
+        
         public RegistrarUsuarios(Usuario u)
-        { 
+        {
             this.usuarioact = u;
             InitializeComponent();
         }
@@ -66,7 +67,7 @@ namespace MASHKAPG
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             new VistaAdmin(usuarioact).Show();
         }
 
@@ -99,6 +100,43 @@ namespace MASHKAPG
             {
                 this.password2.PasswordChar = '\0';
             }
+        }
+
+        private void bt_registrar_Click(object sender, EventArgs e)
+        {
+            if (this.usuario.Text != "")
+            {
+                if(comprobar_contra())
+                {
+                    Usuario.registrarUsuario(new Usuario(name: this.usuario.Text, password: Usuario.GetMD5(password1.Text), tipo: "usuario"));
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Nombre de Usuario no válido");
+            }
+        }
+
+        private bool comprobar_contra()
+        {
+            bool iguales;
+
+            if(this.password1.Text == this.password2.Text && this.password1.Text != "" && this.password2.Text != "")
+            {
+                iguales = true;
+            }
+            else
+            {
+                iguales = false;
+                
+            }
+
+            return iguales;
         }
     }
 }

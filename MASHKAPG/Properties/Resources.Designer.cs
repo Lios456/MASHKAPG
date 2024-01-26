@@ -63,9 +63,39 @@ namespace MASHKAPG.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boton_fondo {
+            get {
+                object obj = ResourceManager.GetObject("boton_fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap boton_fondo_blanco {
+            get {
+                object obj = ResourceManager.GetObject("boton_fondo_blanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boton_salir_a_la_aplicacion {
             get {
                 object obj = ResourceManager.GetObject("boton-salir-a-la-aplicacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_redondeado_negro {
+            get {
+                object obj = ResourceManager.GetObject("fondo_redondeado_negro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

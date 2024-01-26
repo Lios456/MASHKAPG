@@ -15,10 +15,13 @@ namespace MASHKAPG
     public partial class RegistrarClientes : Form
     {
         private Usuario usuarioact;
+        public Cliente clienteregistrar = new Cliente();
         public RegistrarClientes(Usuario u)
         {
             this.usuarioact = u;
             InitializeComponent();
+            this.tx_edad.Text = "0";
+            this.tx_peso.Text = "0.0";
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -87,6 +90,24 @@ namespace MASHKAPG
                 this.Hide();
                 new Vistausu(usuarioact).Show();
             }
+        }
+
+        private void bt_registrar_Click(object sender, EventArgs e)
+        {
+            clienteregistrar.Name = tx_nombre.Text;
+            clienteregistrar.LastName = tx_apellido.Text;
+            clienteregistrar.DNI = tx_cedula.Text;
+            clienteregistrar.Direction = tx_direccion.Text;
+            clienteregistrar.Age = int.Parse(tx_edad.Text);
+            clienteregistrar.Ingreso = DateTime.Now;
+            clienteregistrar.Salida = DateTime.Parse(tx_fechain.Text);
+            clienteregistrar.Horario = tx_horario.Text;
+            clienteregistrar.Objetives = tx_objetivo.Text;
+            clienteregistrar.Observaciones = tx_observaciones.Text;
+            clienteregistrar.Weight = decimal.Parse(tx_peso.Text);
+            clienteregistrar.Size = tx_talla.Text;
+            clienteregistrar.Phone = tx_telefono.Text;
+            Cliente.agregarcli(clienteregistrar);
         }
     }
 }
