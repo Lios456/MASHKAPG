@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaAdmin));
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             button1 = new Button();
@@ -329,6 +330,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "VistaAdmin";
             Text = "VistaAdmin";
             tableLayoutPanel1.ResumeLayout(false);

@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerClientes));
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             button1 = new Button();
@@ -180,6 +181,7 @@
             // 
             // tableLayoutPanel3
             // 
+            tableLayoutPanel3.BackColor = Color.White;
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 0);
@@ -197,6 +199,7 @@
             // 
             // tableLayoutPanel4
             // 
+            tableLayoutPanel4.BackColor = Color.FromArgb(255, 255, 128);
             tableLayoutPanel4.ColumnCount = 3;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
@@ -400,11 +403,11 @@
             // filtro
             // 
             filtro.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            filtro.BackColor = Color.Black;
+            filtro.BackColor = Color.White;
             filtro.DropDownStyle = ComboBoxStyle.DropDownList;
             filtro.FlatStyle = FlatStyle.Flat;
             filtro.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            filtro.ForeColor = Color.White;
+            filtro.ForeColor = Color.Black;
             filtro.FormattingEnabled = true;
             filtro.Items.AddRange(new object[] { "Todos", "Nombre", "Apellido", "Por Pagar", "Pagados" });
             filtro.Location = new Point(628, 7);
@@ -439,6 +442,7 @@
             // clientes_view
             // 
             clientes_view.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            clientes_view.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             clientes_view.BackgroundColor = Color.White;
             clientes_view.BorderStyle = BorderStyle.None;
             clientes_view.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -478,6 +482,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "VerClientes";
             Text = "VerClientes";
             tableLayoutPanel1.ResumeLayout(false);

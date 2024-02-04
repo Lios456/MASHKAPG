@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarClientes));
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             button1 = new Button();
@@ -37,7 +38,6 @@
             panel1 = new Panel();
             tableLayoutPanel7 = new TableLayoutPanel();
             tableLayoutPanel5 = new TableLayoutPanel();
-            label10 = new Label();
             tx_peso = new TextBox();
             label9 = new Label();
             tx_talla = new TextBox();
@@ -73,6 +73,7 @@
             pictureBox1 = new PictureBox();
             pictureBox4 = new PictureBox();
             label8 = new Label();
+            label10 = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -223,10 +224,10 @@
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 51.778656F));
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 57F));
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 135F));
-            tableLayoutPanel5.Controls.Add(label10, 0, 0);
             tableLayoutPanel5.Controls.Add(tx_peso, 0, 0);
             tableLayoutPanel5.Controls.Add(label9, 0, 0);
             tableLayoutPanel5.Controls.Add(tx_talla, 3, 0);
+            tableLayoutPanel5.Controls.Add(label10, 2, 0);
             tableLayoutPanel5.Dock = DockStyle.Fill;
             tableLayoutPanel5.Location = new Point(454, 2);
             tableLayoutPanel5.Margin = new Padding(3, 2, 3, 2);
@@ -235,18 +236,6 @@
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel5.Size = new Size(446, 45);
             tableLayoutPanel5.TabIndex = 2;
-            // 
-            // label10
-            // 
-            label10.Anchor = AnchorStyles.Right;
-            label10.AutoSize = true;
-            label10.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(260, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(47, 45);
-            label10.TabIndex = 9;
-            label10.Text = "Talla:";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tx_peso
             // 
@@ -732,6 +721,17 @@
             label8.Text = "REGISTRO DE CLIENTE";
             label8.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.None;
+            label10.AutoSize = true;
+            label10.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(258, 13);
+            label10.Name = "label10";
+            label10.Size = new Size(46, 19);
+            label10.TabIndex = 9;
+            label10.Text = "Talla:";
+            // 
             // RegistrarClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -740,6 +740,7 @@
             ClientSize = new Size(909, 591);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "RegistrarClientes";
             Text = "RegistrarClientes";
             tableLayoutPanel1.ResumeLayout(false);
@@ -799,7 +800,6 @@
         private TextBox tx_observaciones;
         private DateTimePicker tx_fechain;
         private TableLayoutPanel tableLayoutPanel5;
-        private Label label10;
         private TextBox tx_peso;
         private Label label9;
         private TextBox tx_talla;
@@ -810,5 +810,6 @@
         private TableLayoutPanel tableLayoutPanel7;
         private TableLayoutPanel tableLayoutPanel8;
         private TableLayoutPanel tableLayoutPanel9;
+        private Label label10;
     }
 }

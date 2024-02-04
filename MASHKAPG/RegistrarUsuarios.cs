@@ -15,7 +15,7 @@ namespace MASHKAPG
     public partial class RegistrarUsuarios : Form
     {
         private Usuario usuarioact;
-        
+
         public RegistrarUsuarios(Usuario u)
         {
             this.usuarioact = u;
@@ -106,15 +106,32 @@ namespace MASHKAPG
         {
             if (this.usuario.Text != "")
             {
-                if(comprobar_contra())
+                if (comprobar_contra())
                 {
-                    Usuario.registrarUsuario(new Usuario(name: this.usuario.Text, password: Usuario.GetMD5(password1.Text), tipo: "usuario"));
+                    if (Usuario.comprobar_existencia(new Usuario(name: this.usuario.Text, password: Usuario.GetMD5(password1.Text), tipo: "usuario")) == false)
+                    {
+                        try
+                        {
+                            Usuario.registrarUsuario(new Usuario(name: this.usuario.Text, password: password1.Text, tipo: "usuario"));
+                            MessageBox.Show($"Se ha registrado al usuario {this.usuario.Text}");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message.ToString());
+                        }
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya existe un usuario con ese nombre");
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Las contraseñas no coinciden");
                 }
-                
+
             }
             else
             {
@@ -126,17 +143,19 @@ namespace MASHKAPG
         {
             bool iguales;
 
-            if(this.password1.Text == this.password2.Text && this.password1.Text != "" && this.password2.Text != "")
+            if (this.password1.Text == this.password2.Text && this.password1.Text != "" && this.password2.Text != "")
             {
                 iguales = true;
             }
             else
             {
                 iguales = false;
-                
+
             }
 
             return iguales;
         }
+
+
     }
 }

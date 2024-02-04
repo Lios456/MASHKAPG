@@ -55,5 +55,19 @@ namespace MASHKAPG.clases
             new ConexionMysql().insertar(sql);
         }
 
+        public static bool comprobar_cliente(Cliente c)
+        {
+            string sql = $"select * from clientes where nombre = '{c.Name}' and Apellido = '{c.LastName}' and cedula = '{c.DNI}'";
+            var clientes = new ConexionMysql().consultarClientes(sql);
+            if (clientes.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

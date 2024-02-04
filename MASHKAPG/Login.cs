@@ -11,6 +11,7 @@ namespace MASHKAPG
         public Login()
         {
             InitializeComponent();
+            //new ConexionMysql().NoQuery($"Insert into Usuarios(id, Nombre, Password, Tipo) values('1','admin','{Usuario.GetMD5("admin")}','admin')");
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

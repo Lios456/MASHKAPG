@@ -44,6 +44,21 @@ namespace MASHKAPG.clases
             new ConexionMysql().insertar(sql);
         }
 
+        public static bool comprobar_existencia(Usuario u)
+        {
+            string sql = $"select * from usuario where Nombre = '{u.usuarioName}'";
+            var usu = new ConexionMysql().consultaUsuarios(sql);
+            if(usu.Count() > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
 
 
     }
