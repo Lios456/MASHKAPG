@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace MASHKAPG
     public partial class VerClientes : Form
     {
         private Usuario usuarioact;
+        private List<Cliente> clientesselected = new List<Cliente>();
         public VerClientes(Usuario u)
         {
             this.usuarioact = u;
@@ -119,6 +121,69 @@ namespace MASHKAPG
                 this.clientes_view.DataSource = new ConexionMysql().consultarClientes($"select * from clientes where apellido like '%{this.texto.Text}%'");
             }
 
+        }
+
+        private void clientes_view_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewRow fila in clientes_view.Rows)
+            {
+                DataGridViewCheckBoxCell check = fila.Cells["Eleccion"] as DataGridViewCheckBoxCell;
+                if (Convert.ToBoolean(check?.Value))
+                {
+                    clientesselected.Add(new Cliente
+                    {
+                        Id = Convert.ToInt32(fila.Cells["Id"].Value),
+                        Name = fila.Cells["Nombre"].Value.ToString(),
+                        LastName = fila.Cells["Apellido"].Value.ToString(),
+                        DNI = fila.Cells["Cedula"].Value.ToString(),
+                        Age = Convert.ToInt32(fila.Cells["Edad"].Value),
+                        Phone = fila.Cells["Teléfono"].Value.ToString(),
+                        Direction = fila.Cells["Dirección"].Value.ToString(),
+                        Weight = Convert.ToDecimal(fila.Cells["Peso"].Value),
+                        Size = fila.Cells["Talla"].Value.ToString(),
+                        Horario = fila.Cells["Horario"].Value.ToString(),
+                        Observaciones = fila.Cells["Observaciones"].Value.ToString(),
+                        Ingreso = Convert.ToDateTime(fila.Cells["Ingreso"].Value),
+                        Salida = Convert.ToDateTime(fila.Cells["Salida"].Value),
+                        Restant = Convert.ToInt16(fila.Cells["Días restantes"].Value)
+                    });
+                }
+                else
+                {
+
+                }
+            }
+            Console.WriteLine("");
+        }
+
+        private void bt_borrar_Click(object sender, EventArgs e)
+        {
+            foreach (Cliente cliente in clientesselected)
+            {
+                new ConexionMysql().Delete($"delete from clientes where id = {cliente.Id}");
+            }
+            MessageBox.Show("Se han eliminado a los clientes seleccionados");
+            this.clientes_view.DataSource = new ConexionMysql().consultarClientes("select * from clientes");
+        }
+
+        private void bt_autorenov_Click(object sender, EventArgs e)
+        {
+            foreach (Cliente cliente in clientesselected)
+            {
+                new ConexionMysql().Update($"update clientes set Salida = '{cliente.Salida.Year}-{cliente.Salida.Month + 1}-{cliente.Salida.Day}' where id = {cliente.Id}");
+            }
+            MessageBox.Show("Se actualizó la suscripción de los clientes seleccionados");
+            new ConexionMysql().NoQuery("call actualizarrestante()");
+            this.clientes_view.DataSource = new ConexionMysql().consultarClientes("select * from clientes");
+        }
+
+        private void bt_actualizar_Click(object sender, EventArgs e)
+        {
+            if (clientesselected.Count > 0 && clientesselected.Count<=1) 
+            {
+                this.Hide();
+                new RegistrarClientes(u: usuarioact, c: clientesselected[0], tipo: "update").Show();
+            }
         }
     }
 }

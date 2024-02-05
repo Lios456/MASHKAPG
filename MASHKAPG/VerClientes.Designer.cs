@@ -295,6 +295,7 @@
             bt_actualizar.TabIndex = 0;
             bt_actualizar.Text = "ACTUALIZAR";
             bt_actualizar.UseVisualStyleBackColor = true;
+            bt_actualizar.Click += bt_actualizar_Click;
             // 
             // bt_autorenov
             // 
@@ -310,6 +311,7 @@
             bt_autorenov.TabIndex = 1;
             bt_autorenov.Text = "AUTO RENOV";
             bt_autorenov.UseVisualStyleBackColor = true;
+            bt_autorenov.Click += bt_autorenov_Click;
             // 
             // bt_borrar
             // 
@@ -325,6 +327,7 @@
             bt_borrar.TabIndex = 2;
             bt_borrar.Text = "BORRAR";
             bt_borrar.UseVisualStyleBackColor = true;
+            bt_borrar.Click += bt_borrar_Click;
             // 
             // tableLayoutPanel7
             // 
@@ -464,6 +467,7 @@
             clientes_view.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             clientes_view.Size = new Size(782, 202);
             clientes_view.TabIndex = 1;
+            clientes_view.CellValueChanged += clientes_view_CellValueChanged;
             // 
             // Eleccion
             // 

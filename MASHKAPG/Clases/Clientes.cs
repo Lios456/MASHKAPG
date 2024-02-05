@@ -109,5 +109,24 @@ namespace MASHKAPG.clases
 
         }
 
+        public static void actualizar(Cliente c)
+        {
+            string sql = $"update clientes set " +
+                $"Nombre = '{c.Name}'," +
+                $"apellido = '{c.LastName}'," +
+                $"cedula = '{c.DNI}'," +
+                $"edad = '{c.Age}'," +
+                $"telefono = '{c.Phone}'," +
+                $"direccion = '{c.Direction}'," +
+                $"peso = '{c.Weight}'," +
+                $"talla = '{c.Size}'," +
+                $"horario = '{c.Horario}'," +
+                $"objetivo = '{c.Objetives}'," +
+                $"observaciones = '{c.Observaciones}'," +
+                $"salida = '{c.Salida.Year}-{c.Salida.Month}-{c.Salida.Day}'" +
+                $"where id = '{c.Id}'";
+            new ConexionMysql().Update(sql);
+        }
+
     }
 }

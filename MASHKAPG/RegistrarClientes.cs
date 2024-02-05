@@ -16,12 +16,33 @@ namespace MASHKAPG
     {
         private Usuario usuarioact;
         public Cliente clienteregistrar = new Cliente();
+        private String tipo = "insert";
         public RegistrarClientes(Usuario u)
         {
             this.usuarioact = u;
             InitializeComponent();
             this.tx_edad.Text = "0";
             this.tx_peso.Text = "0.0";
+        }
+
+        public RegistrarClientes(Usuario u, Cliente c, String tipo)
+        {
+            this.usuarioact = u; this.clienteregistrar = c;
+            InitializeComponent(); 
+            this.tx_fechain.MinDate = new DateTime(day: clienteregistrar.Ingreso.Day, month: clienteregistrar.Ingreso.Month, year: clienteregistrar.Ingreso.Year);
+            this.tipo = tipo;
+            this.tx_nombre.Text = c.Name;
+            this.tx_apellido.Text = c.LastName;
+            this.tx_cedula.Text = c.DNI;
+            this.tx_direccion.Text = c.Direction;
+            this.tx_edad.Text = c.Age.ToString();
+            this.tx_fechain.Value = c.Salida;
+            this.tx_horario.Text = c.Horario;
+            this.tx_objetivo.Text = c.Objetives;
+            this.tx_observaciones.Text = c.Observaciones;
+            this.tx_peso.Text = c.Weight.ToString();
+            this.tx_talla.Text = c.Size;
+            this.tx_telefono.Text = c.Phone;
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -68,85 +89,108 @@ namespace MASHKAPG
             this.tx_apellido.Text = "";
             this.tx_cedula.Text = "";
             this.tx_direccion.Text = "";
-            this.tx_edad.Text = "";
+            this.tx_edad.Text = "0";
             this.tx_fechain.Value = DateTime.Now;
             this.tx_horario.Text = "";
             this.tx_objetivo.Text = "";
             this.tx_observaciones.Text = "";
-            this.tx_peso.Text = "";
+            this.tx_peso.Text = "0.0";
             this.tx_talla.Text = "";
             this.tx_telefono.Text = "";
         }
 
         private void bt_regresar_Click(object sender, EventArgs e)
         {
-            if (usuarioact.Tipo == "admin")
+            if(this.tipo == "insert")
             {
-                this.Hide();
-                new VistaAdmin(usuarioact).Show();
+                if (usuarioact.Tipo == "admin")
+                {
+                    this.Hide();
+                    new VistaAdmin(usuarioact).Show();
+                }
+                else
+                {
+                    this.Hide();
+                    new Vistausu(usuarioact).Show();
+                }
             }
             else
             {
                 this.Hide();
-                new Vistausu(usuarioact).Show();
+                new VerClientes(usuarioact).Show();
             }
         }
 
         private void bt_registrar_Click(object sender, EventArgs e)
         {
-            try
+            clienteregistrar.Name = tx_nombre.Text;
+            clienteregistrar.LastName = tx_apellido.Text;
+            clienteregistrar.DNI = tx_cedula.Text;
+            clienteregistrar.Direction = tx_direccion.Text;
+            clienteregistrar.Age = int.Parse(tx_edad.Text);
+            clienteregistrar.Ingreso = DateTime.Now;
+            clienteregistrar.Salida = DateTime.Parse(tx_fechain.Text);
+            clienteregistrar.Horario = tx_horario.Text;
+            clienteregistrar.Objetives = tx_objetivo.Text;
+            clienteregistrar.Observaciones = tx_observaciones.Text;
+            clienteregistrar.Weight = decimal.Parse(tx_peso.Text);
+            clienteregistrar.Size = tx_talla.Text;
+            clienteregistrar.Phone = tx_telefono.Text;
+            if (this.tipo == "insert")
             {
-                clienteregistrar.Name = tx_nombre.Text;
-                clienteregistrar.LastName = tx_apellido.Text;
-                clienteregistrar.DNI = tx_cedula.Text;
-                clienteregistrar.Direction = tx_direccion.Text;
-                clienteregistrar.Age = int.Parse(tx_edad.Text);
-                clienteregistrar.Ingreso = DateTime.Now;
-                clienteregistrar.Salida = DateTime.Parse(tx_fechain.Text);
-                clienteregistrar.Horario = tx_horario.Text;
-                clienteregistrar.Objetives = tx_objetivo.Text;
-                clienteregistrar.Observaciones = tx_observaciones.Text;
-                clienteregistrar.Weight = decimal.Parse(tx_peso.Text);
-                clienteregistrar.Size = tx_talla.Text;
-                clienteregistrar.Phone = tx_telefono.Text;
-                if (Cliente.comprobar_cliente(clienteregistrar) == false)
+                try
                 {
-                    try
+                    if (Cliente.comprobar_cliente(clienteregistrar) == false)
                     {
-                        Cliente.agregarcli(clienteregistrar);
-                        MessageBox.Show($"Se registró al usuario {clienteregistrar.Name} {clienteregistrar.LastName} con la cédula {clienteregistrar.DNI}");
+                        try
+                        {
+                            Cliente.agregarcli(clienteregistrar);
+                            MessageBox.Show($"Se registró al usuario {clienteregistrar.Name} {clienteregistrar.LastName} con la cédula {clienteregistrar.DNI}");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message.ToString());
+                        }
+
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message.ToString());
+
+                        MessageBox.Show("Ya existe un cliente con esos datos");
+                        clienteregistrar = Cliente.get_cliente(clienteregistrar);
+                        this.tx_fechain.MinDate = new DateTime(day: clienteregistrar.Ingreso.Day, month: clienteregistrar.Ingreso.Month, year: clienteregistrar.Ingreso.Year);
+                        this.tx_nombre.Text = clienteregistrar.Name;
+                        this.tx_apellido.Text = clienteregistrar.LastName;
+                        this.tx_cedula.Text = clienteregistrar.DNI;
+                        this.tx_direccion.Text = clienteregistrar.Direction;
+                        this.tx_edad.Text = clienteregistrar.Age.ToString();
+                        this.tx_fechain.Value = clienteregistrar.Salida;
+                        this.tx_horario.Text = clienteregistrar.Horario;
+                        this.tx_objetivo.Text = clienteregistrar.Objetives;
+                        this.tx_observaciones.Text = clienteregistrar.Observaciones;
+                        this.tx_peso.Text = clienteregistrar.Weight.ToString();
+                        this.tx_talla.Text = clienteregistrar.Size;
+                        this.tx_telefono.Text = clienteregistrar.Phone;
+                        this.tipo = "update";
                     }
 
                 }
-                else
+                catch (Exception ex)
                 {
-                    
-                    MessageBox.Show("Ya existe un cliente con esos datos");
-                    clienteregistrar = Cliente.get_cliente(clienteregistrar);
-                    this.tx_fechain.MinDate = new DateTime(day: clienteregistrar.Ingreso.Day, month: clienteregistrar.Ingreso.Month, year: clienteregistrar.Ingreso.Year);
-                    this.tx_nombre.Text = clienteregistrar.Name;
-                    this.tx_apellido.Text = clienteregistrar.LastName;
-                    this.tx_cedula.Text = clienteregistrar.DNI;
-                    this.tx_direccion.Text = clienteregistrar.Direction;
-                    this.tx_edad.Text = clienteregistrar.Age.ToString();
-                    this.tx_fechain.Value= clienteregistrar.Salida;
-                    this.tx_horario.Text = clienteregistrar.Horario;
-                    this.tx_objetivo.Text = clienteregistrar.Objetives;
-                    this.tx_observaciones.Text = clienteregistrar.Observaciones;
-                    this.tx_peso.Text = clienteregistrar.Weight.ToString();
-                    this.tx_talla.Text = clienteregistrar.Size;
-                    this.tx_telefono.Text = clienteregistrar.Phone;
-
+                    MessageBox.Show(ex.Message.ToString());
                 }
-
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message.ToString());
+                try
+                {
+                    Cliente.actualizar(clienteregistrar);
+                    MessageBox.Show($"Se actualizó al cliente: {clienteregistrar.Name} {clienteregistrar.LastName}");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
 
         }
