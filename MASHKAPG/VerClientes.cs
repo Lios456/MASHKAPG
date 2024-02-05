@@ -24,6 +24,8 @@ namespace MASHKAPG
             filtro.SelectedIndex = 0;
             new ConexionMysql().NoQuery("call actualizarrestante()");
             this.clientes_view.DataSource = new ConexionMysql().consultarClientes("select * from clientes");
+            clientes_view.Rows[clientes_view.Rows.Count-1].Cells["Eleccion"].ReadOnly = true;
+            clientes_view.Rows[clientes_view.Rows.Count - 1].Cells["Eleccion"].Value = false;
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -130,23 +132,30 @@ namespace MASHKAPG
                 DataGridViewCheckBoxCell check = fila.Cells["Eleccion"] as DataGridViewCheckBoxCell;
                 if (Convert.ToBoolean(check?.Value))
                 {
-                    clientesselected.Add(new Cliente
+                    try
                     {
-                        Id = Convert.ToInt32(fila.Cells["Id"].Value),
-                        Name = fila.Cells["Nombre"].Value.ToString(),
-                        LastName = fila.Cells["Apellido"].Value.ToString(),
-                        DNI = fila.Cells["Cedula"].Value.ToString(),
-                        Age = Convert.ToInt32(fila.Cells["Edad"].Value),
-                        Phone = fila.Cells["Teléfono"].Value.ToString(),
-                        Direction = fila.Cells["Dirección"].Value.ToString(),
-                        Weight = Convert.ToDecimal(fila.Cells["Peso"].Value),
-                        Size = fila.Cells["Talla"].Value.ToString(),
-                        Horario = fila.Cells["Horario"].Value.ToString(),
-                        Observaciones = fila.Cells["Observaciones"].Value.ToString(),
-                        Ingreso = Convert.ToDateTime(fila.Cells["Ingreso"].Value),
-                        Salida = Convert.ToDateTime(fila.Cells["Salida"].Value),
-                        Restant = Convert.ToInt16(fila.Cells["Días restantes"].Value)
-                    });
+                        clientesselected.Add(new Cliente
+                        {
+                            Id = Convert.ToInt32(fila.Cells["Id"].Value),
+                            Name = fila.Cells["Nombre"].Value.ToString(),
+                            LastName = fila.Cells["Apellido"].Value.ToString(),
+                            DNI = fila.Cells["Cedula"].Value.ToString(),
+                            Age = Convert.ToInt32(fila.Cells["Edad"].Value),
+                            Phone = fila.Cells["Teléfono"].Value.ToString(),
+                            Direction = fila.Cells["Dirección"].Value.ToString(),
+                            Weight = Convert.ToDecimal(fila.Cells["Peso"].Value),
+                            Size = fila.Cells["Talla"].Value.ToString(),
+                            Horario = fila.Cells["Horario"].Value.ToString(),
+                            Observaciones = fila.Cells["Observaciones"].Value.ToString(),
+                            Ingreso = Convert.ToDateTime(fila.Cells["Ingreso"].Value),
+                            Salida = Convert.ToDateTime(fila.Cells["Salida"].Value),
+                            Restant = Convert.ToInt16(fila.Cells["Días restantes"].Value)
+                        });
+                    }catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+                    
                 }
                 else
                 {
@@ -158,12 +167,20 @@ namespace MASHKAPG
 
         private void bt_borrar_Click(object sender, EventArgs e)
         {
-            foreach (Cliente cliente in clientesselected)
+            if (clientesselected.Count > 0)
             {
-                new ConexionMysql().Delete($"delete from clientes where id = {cliente.Id}");
+                foreach (Cliente cliente in clientesselected)
+                {
+                    new ConexionMysql().Delete($"delete from clientes where id = {cliente.Id}");
+                }
+                MessageBox.Show("Se han eliminado a los clientes seleccionados");
+                this.clientes_view.DataSource = new ConexionMysql().consultarClientes("select * from clientes");
             }
-            MessageBox.Show("Se han eliminado a los clientes seleccionados");
-            this.clientes_view.DataSource = new ConexionMysql().consultarClientes("select * from clientes");
+            else
+            {
+                MessageBox.Show("No se ha seleccionado a nadie");
+            }
+            
         }
 
         private void bt_autorenov_Click(object sender, EventArgs e)
@@ -178,11 +195,16 @@ namespace MASHKAPG
                 new ConexionMysql().NoQuery("call actualizarrestante()");
                 this.clientes_view.DataSource = new ConexionMysql().consultarClientes("select * from clientes");
             }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado a nadie");
+            }
             
         }
 
         private void bt_actualizar_Click(object sender, EventArgs e)
         {
+
             if (clientesselected.Count > 0 && clientesselected.Count<=1) 
             {
                 this.Hide();
