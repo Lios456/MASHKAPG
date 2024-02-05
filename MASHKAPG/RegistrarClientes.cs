@@ -124,7 +124,22 @@ namespace MASHKAPG
                 }
                 else
                 {
+                    
                     MessageBox.Show("Ya existe un cliente con esos datos");
+                    clienteregistrar = Cliente.get_cliente(clienteregistrar);
+                    this.tx_fechain.MinDate = new DateTime(day: clienteregistrar.Ingreso.Day, month: clienteregistrar.Ingreso.Month, year: clienteregistrar.Ingreso.Year);
+                    this.tx_nombre.Text = clienteregistrar.Name;
+                    this.tx_apellido.Text = clienteregistrar.LastName;
+                    this.tx_cedula.Text = clienteregistrar.DNI;
+                    this.tx_direccion.Text = clienteregistrar.Direction;
+                    this.tx_edad.Text = clienteregistrar.Age.ToString();
+                    this.tx_fechain.Value= clienteregistrar.Salida;
+                    this.tx_horario.Text = clienteregistrar.Horario;
+                    this.tx_objetivo.Text = clienteregistrar.Objetives;
+                    this.tx_observaciones.Text = clienteregistrar.Observaciones;
+                    this.tx_peso.Text = clienteregistrar.Weight.ToString();
+                    this.tx_talla.Text = clienteregistrar.Size;
+                    this.tx_telefono.Text = clienteregistrar.Phone;
 
                 }
 

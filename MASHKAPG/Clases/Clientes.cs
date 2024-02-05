@@ -69,5 +69,45 @@ namespace MASHKAPG.clases
             }
         }
 
+        public static Cliente get_cliente(Cliente c)
+        {
+            /*
+            
+            
+            
+            
+            
+            Clientes.Columns.Add("Dirección", typeof(string));
+            Clientes.Columns.Add("Peso", typeof(float));
+            Clientes.Columns.Add("Talla", typeof(string));
+            Clientes.Columns.Add("Horario", typeof(string));
+            Clientes.Columns.Add("Objetivo", typeof(string));
+            Clientes.Columns.Add("Observaciones", typeof(string));
+            Clientes.Columns.Add("Ingreso", typeof(DateTime));
+            Clientes.Columns.Add("Salida", typeof(DateTime));
+            Clientes.Columns.Add("Días restantes", typeof(int));
+             */
+            Cliente nc = new Cliente();
+            string sql = $"select * from clientes where nombre = '{c.Name}' and Apellido = '{c.LastName}' and cedula = '{c.DNI}'";
+            var clientes = new ConexionMysql().consultarClientes(sql);
+            nc.Id = (int)clientes.Rows[0]["Id"];
+            nc.Name = (string)clientes.Rows[0]["Nombre"];
+            nc.LastName = (string)clientes.Rows[0]["Apellido"];
+            nc.DNI = (string)clientes.Rows[0]["Cedula"];
+            nc.Age = (int)clientes.Rows[0]["Edad"];
+            nc.Phone = (string)clientes.Rows[0]["Teléfono"];
+            nc.Direction = (string)clientes.Rows[0]["Dirección"];
+            nc.Weight = Convert.ToDecimal(clientes.Rows[0]["Peso"]);
+            nc.Size = (string)clientes.Rows[0]["Talla"];
+            nc.Horario = (string)clientes.Rows[0]["Horario"];
+            nc.Objetives = (string)clientes.Rows[0]["Objetivo"];
+            nc.Observaciones = (string)clientes.Rows[0]["Observaciones"];
+            nc.Ingreso = (DateTime)clientes.Rows[0]["Ingreso"];
+            nc.Salida = (DateTime)clientes.Rows[0]["Salida"];
+            nc.Restant = (int)clientes.Rows[0]["Días restantes"];
+            return nc;
+
+        }
+
     }
 }

@@ -41,6 +41,7 @@
             tx_peso = new TextBox();
             label9 = new Label();
             tx_talla = new TextBox();
+            label10 = new Label();
             tableLayoutPanel6 = new TableLayoutPanel();
             label11 = new Label();
             label12 = new Label();
@@ -73,7 +74,6 @@
             pictureBox1 = new PictureBox();
             pictureBox4 = new PictureBox();
             label8 = new Label();
-            label10 = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -272,6 +272,17 @@
             tx_talla.Name = "tx_talla";
             tx_talla.Size = new Size(79, 30);
             tx_talla.TabIndex = 8;
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.None;
+            label10.AutoSize = true;
+            label10.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(258, 13);
+            label10.Name = "label10";
+            label10.Size = new Size(46, 19);
+            label10.TabIndex = 9;
+            label10.Text = "Talla:";
             // 
             // tableLayoutPanel6
             // 
@@ -720,17 +731,6 @@
             label8.TabIndex = 4;
             label8.Text = "REGISTRO DE CLIENTE";
             label8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            label10.Anchor = AnchorStyles.None;
-            label10.AutoSize = true;
-            label10.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(258, 13);
-            label10.Name = "label10";
-            label10.Size = new Size(46, 19);
-            label10.TabIndex = 9;
-            label10.Text = "Talla:";
             // 
             // RegistrarClientes
             // 
