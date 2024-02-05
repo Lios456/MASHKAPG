@@ -168,13 +168,17 @@ namespace MASHKAPG
 
         private void bt_autorenov_Click(object sender, EventArgs e)
         {
-            foreach (Cliente cliente in clientesselected)
+            if(clientesselected.Count > 0)
             {
-                new ConexionMysql().Update($"update clientes set Salida = '{cliente.Salida.Year}-{cliente.Salida.Month + 1}-{cliente.Salida.Day}' where id = {cliente.Id}");
+                foreach (Cliente cliente in clientesselected)
+                {
+                    new ConexionMysql().Update($"update clientes set Salida = date_add(Salida, interval 1 month) where id = {cliente.Id}");
+                }
+                MessageBox.Show("Se actualizó la suscripción de los clientes seleccionados");
+                new ConexionMysql().NoQuery("call actualizarrestante()");
+                this.clientes_view.DataSource = new ConexionMysql().consultarClientes("select * from clientes");
             }
-            MessageBox.Show("Se actualizó la suscripción de los clientes seleccionados");
-            new ConexionMysql().NoQuery("call actualizarrestante()");
-            this.clientes_view.DataSource = new ConexionMysql().consultarClientes("select * from clientes");
+            
         }
 
         private void bt_actualizar_Click(object sender, EventArgs e)
